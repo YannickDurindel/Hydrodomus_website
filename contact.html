@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Hydrodomus</title>
+  <meta name="description" content="Contactez Hydrodomus.">
+  <link rel="icon" href="assets/images/logo-removebg.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<nav class="nav" id="main-nav">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/images/logo-removebg.png" alt="Hydrodomus">
+    <span class="nav-logo-name">Hydrodomus</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html"         class="nav-page-link" data-i18n="nav.home">Accueil</a></li>
+    <li><a href="how-it-works.html"  class="nav-page-link" data-i18n="nav.how">Comment ça marche</a></li>
+    <li><a href="waitlist.html"      class="nav-page-link" data-i18n="nav.waitlist">Liste d'attente</a></li>
+    <li><a href="contact.html"       class="nav-page-link active" data-i18n="nav.contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-btn" data-lang="fr">FR</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" id="mobile-close">✕</button>
+  <a href="index.html"        class="mobile-nav-link" data-i18n="nav.home">Accueil</a>
+  <a href="how-it-works.html" class="mobile-nav-link" data-i18n="nav.how">Comment ça marche</a>
+  <a href="waitlist.html"     class="mobile-nav-link" data-i18n="nav.waitlist">Liste d'attente</a>
+  <a href="contact.html"      class="mobile-nav-link" data-i18n="nav.contact">Contact</a>
+  <div class="mobile-lang">
+    <button class="lang-btn" data-lang="fr">FR</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+</div>
+
+<header class="page-header">
+  <div class="container">
+    <span class="section-tag" data-i18n="ct.tag">Contact</span>
+    <h1 class="page-header-title" data-i18n="ct.title">Contactez-nous</h1>
+    <p class="page-header-sub" data-i18n="ct.sub">Une question, un partenariat, une candidature - écrivez-nous.</p>
+  </div>
+</header>
+
+<!-- CONTACT SECTION -->
+<section class="section-white">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- FORM -->
+      <div class="reveal-l">
+        <form action="https://formspree.io/f/xzdjzoba" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="name" data-i18n="ct.name">Nom complet</label>
+              <input class="form-input" type="text" id="name" name="name" required data-i18n-placeholder="ct.name">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email" data-i18n="ct.email">Email</label>
+              <input class="form-input" type="email" id="email" name="_replyto" required data-i18n-placeholder="ct.email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="company" data-i18n="ct.company">Société (optionnel)</label>
+            <input class="form-input" type="text" id="company" name="company" data-i18n-placeholder="ct.company">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="subject" data-i18n="ct.subject">Objet</label>
+            <select class="form-select" id="subject" name="subject">
+              <option value="general"  data-i18n="ct.opt.general">Question générale</option>
+              <option value="waitlist" data-i18n="ct.opt.waitlist">Liste d'attente</option>
+              <option value="careers"  data-i18n="ct.opt.careers">Candidature / Recrutement</option>
+              <option value="partner"  data-i18n="ct.opt.partner">Partenariat</option>
+              <option value="press"    data-i18n="ct.opt.press">Presse / Médias</option>
+              <option value="other"    data-i18n="ct.opt.other">Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message" data-i18n="ct.msg">Message</label>
+            <textarea class="form-textarea" id="message" name="message" required data-i18n-placeholder="ct.msg"></textarea>
+          </div>
+          <input type="hidden" name="_subject" value="Nouveau contact Hydrodomus">
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;" data-i18n="ct.send">Envoyer le message</button>
+        </form>
+      </div>
+
+      <!-- INFO SIDEBAR -->
+      <div class="reveal-r">
+        <div class="contact-info-section">
+          <h3 data-i18n="ct.info">Informations</h3>
+
+          <div class="contact-info-item">
+            <span class="contact-info-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            <div>
+              <div class="contact-info-label">Email</div>
+              <div class="contact-info-value">
+                <a href="mailto:contact@hydrodomus.fr" style="color:var(--blue);">contact@hydrodomus.fr</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <span class="contact-info-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <div>
+              <div class="contact-info-label">Localisation</div>
+              <div class="contact-info-value">France</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <span class="contact-info-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+            </span>
+            <div>
+              <div class="contact-info-label">Temps de réponse</div>
+              <div class="contact-info-value" data-i18n="ct.response">Réponse sous 48h ouvrées</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hiring note -->
+        <div class="hiring-box">
+          <div class="hiring-box-tag" data-i18n="ct.hiring.tag">Nous recrutons</div>
+          <p data-i18n="ct.hiring.text">Hydrodomus agrandit son équipe. Si vous souhaitez nous rejoindre, sélectionnez « Candidature / Recrutement » dans le formulaire et présentez-vous — nous n'avons pas de liste de postes fixe pour le moment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-logo">
+          <img src="assets/images/logo-removebg.png" alt="Hydrodomus">
+          <span>Hydrodomus</span>
+        </div>
+        <p data-i18n="ft.tagline">Hydrogène résidentiel.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="ft.nav">Navigation</h4>
+        <ul>
+          <li><a href="index.html"        data-i18n="nav.home">Accueil</a></li>
+          <li><a href="how-it-works.html" data-i18n="nav.how">Comment ça marche</a></li>
+          <li><a href="waitlist.html"     data-i18n="nav.waitlist">Liste d'attente</a></li>
+          <li><a href="contact.html"      data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="ft.contact">Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@hydrodomus.fr">contact@hydrodomus.fr</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="ft.copy">© 2026 Hydrodomus. Tous droits réservés.</p>
+      <a class="footer-badge" href="https://www.frenchtech-grandparis.com" target="_blank" rel="noopener">
+        <span data-i18n="ft.frenchtech">Membre de</span>
+        <img src="assets/images/logo-frenchtech-grandparis.png" alt="La French Tech Grand Paris">
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

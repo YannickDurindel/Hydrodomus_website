@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liste d'attente — Hydrodomus</title>
+  <meta name="description" content="Rejoignez la liste d'attente Hydrodomus.">
+  <link rel="icon" href="assets/images/logo-removebg.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<nav class="nav" id="main-nav">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/images/logo-removebg.png" alt="Hydrodomus">
+    <span class="nav-logo-name">Hydrodomus</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html"         class="nav-page-link" data-i18n="nav.home">Accueil</a></li>
+    <li><a href="how-it-works.html"  class="nav-page-link" data-i18n="nav.how">Comment ça marche</a></li>
+    <li><a href="waitlist.html"      class="nav-page-link active" data-i18n="nav.waitlist">Liste d'attente</a></li>
+    <li><a href="contact.html"       class="nav-page-link" data-i18n="nav.contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-btn" data-lang="fr">FR</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" id="mobile-close">✕</button>
+  <a href="index.html"        class="mobile-nav-link" data-i18n="nav.home">Accueil</a>
+  <a href="how-it-works.html" class="mobile-nav-link" data-i18n="nav.how">Comment ça marche</a>
+  <a href="waitlist.html"     class="mobile-nav-link" data-i18n="nav.waitlist">Liste d'attente</a>
+  <a href="contact.html"      class="mobile-nav-link" data-i18n="nav.contact">Contact</a>
+  <div class="mobile-lang">
+    <button class="lang-btn" data-lang="fr">FR</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+</div>
+
+<section class="qflow-section">
+  <div class="qflow-wrap">
+    <div class="qflow-progress" id="qflow-progress"></div>
+    <div class="qflow-card" id="qflow-card"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-logo">
+          <img src="assets/images/logo-removebg.png" alt="Hydrodomus">
+          <span>Hydrodomus</span>
+        </div>
+        <p data-i18n="ft.tagline">Hydrogène résidentiel.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="ft.nav">Navigation</h4>
+        <ul>
+          <li><a href="index.html"        data-i18n="nav.home">Accueil</a></li>
+          <li><a href="how-it-works.html" data-i18n="nav.how">Comment ça marche</a></li>
+          <li><a href="waitlist.html"     data-i18n="nav.waitlist">Liste d'attente</a></li>
+          <li><a href="contact.html"      data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="ft.contact">Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@hydrodomus.fr">contact@hydrodomus.fr</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="ft.copy">© 2026 Hydrodomus. Tous droits réservés.</p>
+      <a class="footer-badge" href="https://www.frenchtech-grandparis.com" target="_blank" rel="noopener">
+        <span data-i18n="ft.frenchtech">Membre de</span>
+        <img src="assets/images/logo-frenchtech-grandparis.png" alt="La French Tech Grand Paris">
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/waitlist.js"></script>
+</body>
+</html>
