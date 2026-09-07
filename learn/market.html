@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-li18n="pagetitle">Marché & Industrie — Hydrodomus Learn</title>
+  <link rel="icon" href="../assets/images/logo-removebg.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    .article-container { max-width: 800px; margin: 4rem auto; padding: 0 2rem; }
+    .article-header { margin-bottom: 3rem; border-bottom: 1px solid var(--border); padding-bottom: 2rem; }
+    .article-header h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; }
+    .article-body h2 { margin: 3rem 0 1.5rem; font-size: 1.75rem; border-left: 4px solid var(--blue); padding-left: 1rem; }
+    .article-body p { margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--text-2); line-height: 1.8; }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.95rem;
+    }
+    .data-table th, .data-table td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+    }
+    .data-table th { background: var(--bg-alt); font-weight: 700; color: var(--navy); }
+
+    .market-box {
+      background: var(--navy);
+      color: white;
+      padding: 2.5rem;
+      border-radius: var(--radius);
+      margin: 3rem 0;
+    }
+    .market-box h3 { color: white; margin-bottom: 1.5rem; }
+    .market-stat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 2rem;
+    }
+    .market-stat-item { display: flex; flex-direction: column; gap: 0.5rem; }
+    .market-stat-value { font-size: 2rem; font-weight: 700; color: var(--blue-mid); }
+    .market-stat-label { font-size: 0.85rem; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.05em; }
+
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; font-weight: 600; color: var(--blue); }
+  </style>
+</head>
+<body>
+
+<nav class="nav nav-minimal" id="main-nav">
+  <a href="../index.html" class="nav-logo">
+    <img src="../assets/images/logo-removebg.png" alt="Hydrodomus">
+    <span class="nav-logo-name">Hydrodomus</span>
+  </a>
+  <div class="nav-right">
+    <button class="lang-btn" data-lang="fr">FR</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+</nav>
+
+<div class="article-container">
+  <a href="index.html" class="back-link">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    <span data-li18n="back">Retour au hub Learn</span>
+  </a>
+
+  <header class="article-header">
+    <span class="section-tag" data-li18n="tag">Business & Stratégie</span>
+    <h1 data-li18n="h1">Analyse du Marché Hydrogène</h1>
+    <p class="section-sub" data-li18n="sub">Le paradoxe de l'infrastructure et l'opportunité de la recharge décentralisée.</p>
+  </header>
+
+  <div class="article-body">
+    <p data-li18n="p1">Le marché de l'infrastructure hydrogène résidentielle se situe à l'intersection de l'adoption des véhicules à pile à combustible (FCEV) et du fossé infrastructurel. Il est actuellement embryonnaire mais structurellement inévitable si les FCEV continuent de croître.</p>
+
+    <h2 data-li18n="h2.1">Le paradoxe de l'infrastructure</h2>
+    <p data-li18n="p2">C'est le problème classique de "l'œuf et la poule" : les consommateurs n'achètent pas de voitures hydrogène car il n'y a pas de stations, et les fournisseurs ne construisent pas de stations car il n'y a pas assez de voitures.</p>
+    <p data-li18n-html="p3">État actuel (2026) : Environ 1 000 stations publiques dans le monde, concentrées au Japon, en Corée du Sud, en Californie, en Allemagne et en France. Le coût d'une seule station publique dépasse les 3 millions d'euros.</p>
+    <p data-li18n="p4">Hydrodomus brise ce cycle en rendant chaque propriétaire de véhicule totalement autonome pour environ 7 500 €.</p>
+
+    <h2 data-li18n="h2.2">Trajectoire de la flotte FCEV</h2>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th data-li18n="th.year">Année</th>
+          <th data-li18n="th.fleet">Véhicules FCEV (Est. mondiale)</th>
+          <th data-li18n="th.source">Source</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2020</td>
+          <td data-li18n="row1.val">~30 000</td>
+          <td>IEA</td>
+        </tr>
+        <tr>
+          <td>2022</td>
+          <td data-li18n="row2.val">~70 000</td>
+          <td>IEA</td>
+        </tr>
+        <tr>
+          <td>2024</td>
+          <td data-li18n="row3.val">~120 000</td>
+          <td data-li18n="row3.src">IEA Estimate</td>
+        </tr>
+        <tr>
+          <td>2030</td>
+          <td data-li18n="row4.val">500k – 2,5M</td>
+          <td data-li18n="row4.src">Projections</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="market-box">
+      <h3 data-li18n="sizing.title">Sizing du Marché</h3>
+      <div class="market-stat-grid">
+        <div class="market-stat-item">
+          <span class="market-stat-label" data-li18n="sizing.tam.label">TAM (2040)</span>
+          <span class="market-stat-value">€150B+</span>
+          <span class="market-stat-label" data-li18n="sizing.tam.sub">Marché Global H₂</span>
+        </div>
+        <div class="market-stat-item">
+          <span class="market-stat-label" data-li18n="sizing.sam.label">SAM (2030)</span>
+          <span class="market-stat-value">€250M</span>
+          <span class="market-stat-label" data-li18n="sizing.sam.sub">Segment Résidentiel</span>
+        </div>
+        <div class="market-stat-item">
+          <span class="market-stat-label" data-li18n="sizing.som.label">SOM (An 3)</span>
+          <span class="market-stat-value">€4M</span>
+          <span class="market-stat-label" data-li18n="sizing.som.sub">Objectif Hydrodomus</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 data-li18n="h2.3">Leviers de croissance</h2>
+    <p data-li18n-html="p5">1. Poussée réglementaire : La stratégie hydrogène de l'UE vise 40 GW de capacité d'électrolyse d'ici 2030. Aux États-Unis, l'Inflation Reduction Act (IRA) offre des crédits d'impôt massifs pour l'hydrogène vert.</p>
+    <p data-li18n-html="p6">2. Investissements des constructeurs (OEM) : Toyota et Hyundai restent les leaders, mais BMW arrive sur le marché avec l'iX5 Hydrogen. Ces acteurs ont besoin d'une solution comme Hydrodomus pour rassurer leurs clients.</p>
+    <p data-li18n-html="p7">3. Indépendance énergétique : Produire son propre carburant à partir d'eau et de soleil est devenu un argument majeur de sécurité et de résilience post-crise énergétique de 2022.</p>
+  </div>
+</div>
+
+<footer style="background: var(--bg-alt); padding: 4rem 0;">
+  <div class="container" style="text-align: center;">
+    <p data-li18n="footer">© 2025 Hydrodomus Academy — Usage Interne</p>
+  </div>
+</footer>
+
+<script>
+  window.LEARN_I18N = {
+    fr: {
+      pagetitle: 'Marché & Industrie — Hydrodomus Learn',
+      back: 'Retour au hub Learn',
+      tag: 'Business & Stratégie',
+      h1: 'Analyse du Marché Hydrogène',
+      sub: "Le paradoxe de l'infrastructure et l'opportunité de la recharge décentralisée.",
+      p1: "Le marché de l'infrastructure hydrogène résidentielle se situe à l'intersection de l'adoption des véhicules à pile à combustible (FCEV) et du fossé infrastructurel. Il est actuellement embryonnaire mais structurellement inévitable si les FCEV continuent de croître.",
+      'h2.1': "Le paradoxe de l'infrastructure",
+      p2: "C'est le problème classique de « l'œuf et la poule » : les consommateurs n'achètent pas de voitures hydrogène car il n'y a pas de stations, et les fournisseurs ne construisent pas de stations car il n'y a pas assez de voitures.",
+      p3: "<strong>État actuel (2026) :</strong> Environ 1 000 stations publiques dans le monde, concentrées au Japon, en Corée du Sud, en Californie, en Allemagne et en France. Le coût d'une seule station publique dépasse les 3 millions d'euros.",
+      p4: "Hydrodomus brise ce cycle en rendant chaque propriétaire de véhicule totalement autonome pour environ 7 500 €.",
+      'h2.2': 'Trajectoire de la flotte FCEV',
+      'th.year': 'Année', 'th.fleet': 'Véhicules FCEV (Est. mondiale)', 'th.source': 'Source',
+      'row1.val': '~30 000', 'row2.val': '~70 000', 'row3.val': '~120 000', 'row3.src': 'Est. IEA',
+      'row4.val': '500k – 2,5M', 'row4.src': 'Projections',
+      'sizing.title': 'Sizing du Marché',
+      'sizing.tam.label': 'TAM (2040)', 'sizing.tam.sub': 'Marché Global H₂',
+      'sizing.sam.label': 'SAM (2030)', 'sizing.sam.sub': 'Segment Résidentiel',
+      'sizing.som.label': 'SOM (An 3)', 'sizing.som.sub': 'Objectif Hydrodomus',
+      'h2.3': 'Leviers de croissance',
+      p5: "<strong>1. Poussée réglementaire :</strong> La stratégie hydrogène de l'UE vise 40 GW de capacité d'électrolyse d'ici 2030. Aux États-Unis, l'Inflation Reduction Act (IRA) offre des crédits d'impôt massifs pour l'hydrogène vert.",
+      p6: "<strong>2. Investissements des constructeurs (OEM) :</strong> Toyota et Hyundai restent les leaders, mais BMW arrive sur le marché avec l'iX5 Hydrogen. Ces acteurs ont besoin d'une solution comme Hydrodomus pour rassurer leurs clients.",
+      p7: "<strong>3. Indépendance énergétique :</strong> Produire son propre carburant à partir d'eau et de soleil est devenu un argument majeur de sécurité et de résilience post-crise énergétique de 2022.",
+      footer: '© 2025 Hydrodomus Academy — Usage Interne',
+    },
+    en: {
+      pagetitle: 'Market & Industry — Hydrodomus Learn',
+      back: 'Back to Learn hub',
+      tag: 'Business & Strategy',
+      h1: 'Hydrogen Market Analysis',
+      sub: 'The infrastructure paradox and the opportunity of decentralized refueling.',
+      p1: 'The residential hydrogen infrastructure market sits at the intersection of fuel cell vehicle (FCEV) adoption and the infrastructure gap. It is currently embryonic but structurally inevitable if FCEVs keep growing.',
+      'h2.1': 'The infrastructure paradox',
+      p2: "It's the classic chicken-and-egg problem: consumers don't buy hydrogen cars because there are no stations, and providers don't build stations because there aren't enough cars.",
+      p3: '<strong>Current state (2026):</strong> About 1,000 public stations worldwide, concentrated in Japan, South Korea, California, Germany, and France. A single public station costs upwards of €3 million.',
+      p4: 'Hydrodomus breaks this cycle by making every vehicle owner fully self-sufficient for roughly €7,500.',
+      'h2.2': 'FCEV fleet trajectory',
+      'th.year': 'Year', 'th.fleet': 'FCEVs (Global est.)', 'th.source': 'Source',
+      'row1.val': '~30,000', 'row2.val': '~70,000', 'row3.val': '~120,000', 'row3.src': 'IEA est.',
+      'row4.val': '500k – 2.5M', 'row4.src': 'Projections',
+      'sizing.title': 'Market Sizing',
+      'sizing.tam.label': 'TAM (2040)', 'sizing.tam.sub': 'Global H₂ Market',
+      'sizing.sam.label': 'SAM (2030)', 'sizing.sam.sub': 'Residential Segment',
+      'sizing.som.label': 'SOM (Year 3)', 'sizing.som.sub': 'Hydrodomus Target',
+      'h2.3': 'Growth drivers',
+      p5: "<strong>1. Regulatory push:</strong> The EU hydrogen strategy targets 40 GW of electrolysis capacity by 2030. In the US, the Inflation Reduction Act (IRA) offers substantial tax credits for green hydrogen.",
+      p6: '<strong>2. OEM investment:</strong> Toyota and Hyundai remain leaders, but BMW is entering the market with the iX5 Hydrogen. These players need a solution like Hydrodomus to reassure their customers.',
+      p7: '<strong>3. Energy independence:</strong> Producing your own fuel from water and sunlight has become a major security and resilience argument since the 2022 energy crisis.',
+      footer: '© 2025 Hydrodomus Academy — Internal use only',
+    },
+  };
+</script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/learn-i18n.js"></script>
+</body>
+</html>

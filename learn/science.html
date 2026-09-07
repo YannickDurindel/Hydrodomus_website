@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-li18n="pagetitle">Science de l'Hydrogène — Hydrodomus Learn</title>
+  <link rel="icon" href="../assets/images/logo-removebg.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    .article-container {
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+    .article-header {
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2rem;
+    }
+    .article-header h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 1rem;
+    }
+    .article-body h2 {
+      margin: 3rem 0 1.5rem;
+      font-size: 1.75rem;
+      border-left: 4px solid var(--blue);
+      padding-left: 1rem;
+    }
+    .article-body h3 {
+      margin: 2rem 0 1rem;
+      font-size: 1.25rem;
+      color: var(--navy-2);
+    }
+    .article-body p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      color: var(--text-2);
+      line-height: 1.8;
+    }
+    .article-body ul {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    .article-body li {
+      margin-bottom: 0.5rem;
+      color: var(--text-2);
+    }
+    .formula-box {
+      background: var(--bg-alt);
+      padding: 1.5rem;
+      border-radius: var(--radius-sm);
+      font-family: 'Space Grotesk', monospace;
+      font-weight: 500;
+      margin: 2rem 0;
+      text-align: center;
+      border: 1px solid var(--border);
+      overflow-x: auto;
+    }
+    .info-note {
+      background: var(--blue-light);
+      padding: 1.5rem;
+      border-radius: var(--radius-sm);
+      border-left: 4px solid var(--blue);
+      margin: 2rem 0;
+      font-style: italic;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      font-weight: 600;
+      color: var(--blue);
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav nav-minimal" id="main-nav">
+  <a href="../index.html" class="nav-logo">
+    <img src="../assets/images/logo-removebg.png" alt="Hydrodomus">
+    <span class="nav-logo-name">Hydrodomus</span>
+  </a>
+  <div class="nav-right">
+    <button class="lang-btn" data-lang="fr">FR</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+</nav>
+
+<div class="article-container">
+  <a href="index.html" class="back-link">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    <span data-li18n="back">Retour au hub Learn</span>
+  </a>
+
+  <header class="article-header">
+    <span class="section-tag" data-li18n="tag">Science & Ingénierie</span>
+    <h1 data-li18n="h1">Électrochimie de l'électrolyse de l'eau</h1>
+    <p class="section-sub" data-li18n="sub">Comprendre les principes fondamentaux qui permettent de transformer l'eau et l'électricité en hydrogène haute pureté.</p>
+  </header>
+
+  <div class="article-body">
+    <p data-li18n="p1">L'électrolyse de l'eau est fondamentalement un processus électrochimique : elle utilise le travail électrique pour conduire une réaction thermodynamiquement défavorable. La compréhension de la thermodynamique, de la cinétique et du transport détermine l'efficacité du système et les choix de conception.</p>
+
+    <h2 data-li18n="h2.1">Thermodynamique : Le besoin en énergie</h2>
+
+    <h3 data-li18n="h3.1">Énergie libre de Gibbs</h3>
+    <p data-li18n="p2">Le travail électrique minimal pour diviser l'eau est défini par le changement d'énergie libre de Gibbs :</p>
+    <div class="formula-box">
+      2H₂O(l) → 2H₂(g) + O₂(g) &nbsp;&nbsp; ΔG° = +237.1 kJ/mol H₂
+    </div>
+    <p data-li18n="p3">C'est la partie de l'enthalpie totale de la réaction qui doit être fournie sous forme de travail (électricité).</p>
+
+    <h3 data-li18n="h3.2">Tension de cellule réversible</h3>
+    <p data-li18n="p4">La tension minimale absolue à laquelle l'eau peut être divisée dans des conditions standard (25°C, 1 atm) est :</p>
+    <div class="formula-box">
+      E_rev = ΔG° / (nF) = 1.229 V
+    </div>
+    <p data-li18n="p5">En dessous de cette tension, l'électrolyse ne peut pas se produire, quel que soit le catalyseur utilisé.</p>
+
+    <h3 data-li18n="h3.3">Tension thermoneutre</h3>
+    <div class="formula-box">
+      E_tn = ΔH° / (nF) = 1.481 V
+    </div>
+    <p data-li18n="p6">À exactement 1.481 V, l'apport électrique correspond parfaitement à l'enthalpie — le système est thermiquement neutre. En pratique, la tension de fonctionnement réelle d'une cellule PEM est d'environ 1.8V à 2.1V, ce qui signifie que l'excès de travail apparaît sous forme de chaleur.</p>
+
+    <h2 data-li18n="h2.2">Les deux demi-réactions</h2>
+
+    <h3 data-li18n="h3.4">Réaction d'évolution de l'oxygène (OER) — Anode</h3>
+    <div class="formula-box">
+      2H₂O → O₂ + 4H⁺ + 4e⁻ &nbsp;&nbsp; E° = +1.23 V
+    </div>
+    <p data-li18n="p7">C'est la réaction "goulot d'étranglement". Elle nécessite de casser 4 liaisons O-H par molécule d'O₂ et de transférer 4 électrons. L'iridium (IrO₂) est le meilleur catalyseur connu pour cela dans les conditions acides du PEM, car il stabilise les intermédiaires de réaction de manière optimale.</p>
+
+    <h3 data-li18n="h3.5">Réaction d'évolution de l'hydrogène (HER) — Cathode</h3>
+    <div class="formula-box">
+      4H⁺ + 4e⁻ → 2H₂ &nbsp;&nbsp; E° = 0.00 V
+    </div>
+    <p data-li18n="p8">Cette réaction a une cinétique beaucoup plus rapide que l'OER. Le platine est le catalyseur de choix ici, offrant l'énergie de liaison intermédiaire optimale pour les protons.</p>
+
+    <div class="info-note">
+      <span data-li18n-html="note1">Le saviez-vous ? Le platine est utilisé à la cathode car il se situe au sommet du "volcano plot" de l'activité HER. C'est le matériau qui lie l'hydrogène ni trop fort, ni trop faiblement.</span>
+    </div>
+
+    <h2 data-li18n="h2.3">Efficacité et surtensions</h2>
+    <p data-li18n="p9">La tension réelle de fonctionnement est toujours supérieure à la tension réversible en raison de plusieurs pertes :</p>
+    <ul>
+      <li data-li18n-html="li1">Surtensions d'activation : Énergie nécessaire pour initier les réactions aux électrodes.</li>
+      <li data-li18n-html="li2">Pertes ohmiques : Résistance de la membrane PEM et des contacts électriques.</li>
+      <li data-li18n-html="li3">Pertes de transport de masse : Difficulté pour l'eau d'atteindre les sites actifs ou pour les bulles de gaz de s'échapper.</li>
+    </ul>
+
+    <h2 data-li18n="h2.4">Effet de la pression</h2>
+    <p data-li18n="p10">Produire de l'hydrogène à haute pression (comme les 30 bar en sortie de stack Hydrodomus) nécessite une tension légèrement plus élevée (loi de Nernst), mais cela permet d'économiser un travail de compression mécanique considérable par la suite.</p>
+
+    <div class="formula-box">
+      ΔE ≈ (RT / nF) * ln(P_H₂)
+    </div>
+    <p data-li18n="p11">Pour Hydrodomus, cette pénalité est d'environ 50 mV, un compromis très favorable pour simplifier l'architecture globale du système.</p>
+  </div>
+</div>
+
+<footer style="background: var(--bg-alt); padding: 4rem 0;">
+  <div class="container" style="text-align: center;">
+    <p data-li18n="footer">© 2025 Hydrodomus Academy — Usage Interne</p>
+  </div>
+</footer>
+
+<script>
+  window.LEARN_I18N = {
+    fr: {
+      pagetitle: "Science de l'Hydrogène — Hydrodomus Learn",
+      back: 'Retour au hub Learn',
+      tag: 'Science & Ingénierie',
+      h1: "Électrochimie de l'électrolyse de l'eau",
+      sub: "Comprendre les principes fondamentaux qui permettent de transformer l'eau et l'électricité en hydrogène haute pureté.",
+      p1: "L'électrolyse de l'eau est fondamentalement un processus électrochimique : elle utilise le travail électrique pour conduire une réaction thermodynamiquement défavorable. La compréhension de la thermodynamique, de la cinétique et du transport détermine l'efficacité du système et les choix de conception.",
+      'h2.1': "Thermodynamique : Le besoin en énergie",
+      'h3.1': 'Énergie libre de Gibbs',
+      p2: "Le travail électrique minimal pour diviser l'eau est défini par le changement d'énergie libre de Gibbs :",
+      p3: "C'est la partie de l'enthalpie totale de la réaction qui doit être fournie sous forme de travail (électricité).",
+      'h3.2': 'Tension de cellule réversible',
+      p4: "La tension minimale absolue à laquelle l'eau peut être divisée dans des conditions standard (25°C, 1 atm) est :",
+      p5: "En dessous de cette tension, l'électrolyse ne peut pas se produire, quel que soit le catalyseur utilisé.",
+      'h3.3': 'Tension thermoneutre',
+      p6: "À exactement 1.481 V, l'apport électrique correspond parfaitement à l'enthalpie — le système est thermiquement neutre. En pratique, la tension de fonctionnement réelle d'une cellule PEM est d'environ 1.8V à 2.1V, ce qui signifie que l'excès de travail apparaît sous forme de chaleur.",
+      'h2.2': 'Les deux demi-réactions',
+      'h3.4': "Réaction d'évolution de l'oxygène (OER) — Anode",
+      p7: 'C\'est la réaction "goulot d\'étranglement". Elle nécessite de casser 4 liaisons O-H par molécule d\'O₂ et de transférer 4 électrons. L\'iridium (IrO₂) est le meilleur catalyseur connu pour cela dans les conditions acides du PEM, car il stabilise les intermédiaires de réaction de manière optimale.',
+      'h3.5': "Réaction d'évolution de l'hydrogène (HER) — Cathode",
+      p8: "Cette réaction a une cinétique beaucoup plus rapide que l'OER. Le platine est le catalyseur de choix ici, offrant l'énergie de liaison intermédiaire optimale pour les protons.",
+      note1: '<strong>Le saviez-vous ?</strong> Le platine est utilisé à la cathode car il se situe au sommet du "volcano plot" de l\'activité HER. C\'est le matériau qui lie l\'hydrogène ni trop fort, ni trop faiblement.',
+      'h2.3': 'Efficacité et surtensions',
+      p9: "La tension réelle de fonctionnement est toujours supérieure à la tension réversible en raison de plusieurs pertes :",
+      li1: "<strong>Surtensions d'activation :</strong> Énergie nécessaire pour initier les réactions aux électrodes.",
+      li2: '<strong>Pertes ohmiques :</strong> Résistance de la membrane PEM et des contacts électriques.',
+      li3: "<strong>Pertes de transport de masse :</strong> Difficulté pour l'eau d'atteindre les sites actifs ou pour les bulles de gaz de s'échapper.",
+      'h2.4': 'Effet de la pression',
+      p10: "Produire de l'hydrogène à haute pression (comme les 30 bar en sortie de stack Hydrodomus) nécessite une tension légèrement plus élevée (loi de Nernst), mais cela permet d'économiser un travail de compression mécanique considérable par la suite.",
+      p11: 'Pour Hydrodomus, cette pénalité est d\'environ 50 mV, un compromis très favorable pour simplifier l\'architecture globale du système.',
+      footer: '© 2025 Hydrodomus Academy — Usage Interne',
+    },
+    en: {
+      pagetitle: 'Hydrogen Science — Hydrodomus Learn',
+      back: 'Back to Learn hub',
+      tag: 'Science & Engineering',
+      h1: 'Electrochemistry of Water Electrolysis',
+      sub: 'Understanding the fundamental principles that turn water and electricity into high-purity hydrogen.',
+      p1: 'Water electrolysis is fundamentally an electrochemical process: it uses electrical work to drive a thermodynamically unfavorable reaction. Understanding thermodynamics, kinetics, and transport determines system efficiency and design choices.',
+      'h2.1': 'Thermodynamics: The Energy Requirement',
+      'h3.1': 'Gibbs Free Energy',
+      p2: 'The minimum electrical work needed to split water is defined by the Gibbs free energy change:',
+      p3: 'This is the portion of the total reaction enthalpy that must be supplied as work (electricity).',
+      'h3.2': 'Reversible Cell Voltage',
+      p4: 'The absolute minimum voltage at which water can be split under standard conditions (25°C, 1 atm) is:',
+      p5: 'Below this voltage, electrolysis cannot occur, regardless of the catalyst used.',
+      'h3.3': 'Thermoneutral Voltage',
+      p6: 'At exactly 1.481 V, the electrical input exactly matches the enthalpy — the system is thermally neutral. In practice, the real operating voltage of a PEM cell is around 1.8–2.1 V, meaning the excess work appears as heat.',
+      'h2.2': 'The Two Half-Reactions',
+      'h3.4': 'Oxygen Evolution Reaction (OER) — Anode',
+      p7: 'This is the "bottleneck" reaction. It requires breaking 4 O-H bonds per O₂ molecule and transferring 4 electrons. Iridium (IrO₂) is the best known catalyst for this in the acidic PEM environment, since it stabilizes reaction intermediates optimally.',
+      'h3.5': 'Hydrogen Evolution Reaction (HER) — Cathode',
+      p8: 'This reaction has much faster kinetics than the OER. Platinum is the catalyst of choice here, offering the optimal intermediate binding energy for protons.',
+      note1: '<strong>Did you know?</strong> Platinum is used at the cathode because it sits at the top of the HER activity "volcano plot" — the material that binds hydrogen neither too strongly nor too weakly.',
+      'h2.3': 'Efficiency and Overpotentials',
+      p9: 'The real operating voltage is always higher than the reversible voltage due to several losses:',
+      li1: '<strong>Activation overpotentials:</strong> Energy needed to initiate the reactions at the electrodes.',
+      li2: '<strong>Ohmic losses:</strong> Resistance of the PEM membrane and electrical contacts.',
+      li3: '<strong>Mass transport losses:</strong> Difficulty for water to reach active sites, or for gas bubbles to escape.',
+      'h2.4': 'The Effect of Pressure',
+      p10: 'Producing hydrogen at high pressure (such as the 30 bar at the Hydrodomus stack outlet) requires a slightly higher voltage (Nernst equation), but saves considerable mechanical compression work downstream.',
+      p11: 'For Hydrodomus, this penalty is about 50 mV — a very favorable trade-off that simplifies the overall system architecture.',
+      footer: '© 2025 Hydrodomus Academy — Internal use only',
+    },
+  };
+</script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/learn-i18n.js"></script>
+</body>
+</html>

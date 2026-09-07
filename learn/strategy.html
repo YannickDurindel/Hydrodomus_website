@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-li18n="pagetitle">Vision & Stratégie — Hydrodomus Learn</title>
+  <link rel="icon" href="../assets/images/logo-removebg.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    .article-container { max-width: 800px; margin: 4rem auto; padding: 0 2rem; }
+    .article-header { margin-bottom: 3rem; border-bottom: 1px solid var(--border); padding-bottom: 2rem; }
+    .article-body h2 { margin: 3rem 0 1.5rem; font-size: 1.75rem; border-left: 4px solid var(--blue); padding-left: 1rem; }
+    .article-body p { margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--text-2); line-height: 1.8; }
+    .article-body ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+    .article-body li { margin-bottom: 0.75rem; font-size: 1.1rem; color: var(--text-2); line-height: 1.7; }
+
+    .roadmap-container { margin: 3rem 0; position: relative; padding-left: 2rem; border-left: 2px solid var(--blue-dim); }
+    .roadmap-item { position: relative; margin-bottom: 2.5rem; }
+    .roadmap-item::before {
+      content: '';
+      position: absolute;
+      left: -2.4rem;
+      top: 0.25rem;
+      width: 12px;
+      height: 12px;
+      background: var(--blue);
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 0 0 2px var(--blue-dim);
+    }
+    .roadmap-date { font-weight: 700; color: var(--blue); font-size: 0.85rem; text-transform: uppercase; margin-bottom: 0.25rem; }
+    .roadmap-title { font-weight: 700; font-size: 1.2rem; color: var(--navy); margin-bottom: 0.5rem; }
+    .roadmap-desc { font-size: 0.95rem; color: var(--text-3); }
+
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; font-weight: 600; color: var(--blue); }
+  </style>
+</head>
+<body>
+
+<nav class="nav nav-minimal" id="main-nav">
+  <a href="../index.html" class="nav-logo">
+    <img src="../assets/images/logo-removebg.png" alt="Hydrodomus">
+    <span class="nav-logo-name">Hydrodomus</span>
+  </a>
+  <div class="nav-right">
+    <button class="lang-btn" data-lang="fr">FR</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+</nav>
+
+<div class="article-container">
+  <a href="index.html" class="back-link">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    <span data-li18n="back">Retour au hub Learn</span>
+  </a>
+
+  <header class="article-header">
+    <span class="section-tag" data-li18n="tag">Business & Stratégie</span>
+    <h1 data-li18n="h1">Vision & Stratégie de Croissance</h1>
+    <p class="section-sub" data-li18n="sub">Décentraliser l'infrastructure hydrogène pour libérer l'adoption massive de la mobilité durable.</p>
+  </header>
+
+  <div class="article-body">
+    <p data-li18n="p1">Hydrodomus est né d'une conviction simple : si les voitures électriques ont pu démocratiser leur recharge à domicile, les véhicules à hydrogène le peuvent aussi. Notre mission est de devenir le "Tesla Supercharger" de l'hydrogène, mais directement dans votre garage.</p>
+
+    <h2 data-li18n="h2.1">Modèle Économique</h2>
+    <p data-li18n="p2">Notre stratégie repose sur trois piliers de revenus complémentaires :</p>
+    <ul>
+      <li data-li18n-html="li1">OEM Bundling : Partenariats avec les constructeurs automobiles (Toyota, Hyundai, BMW) pour intégrer Hydrodomus comme option lors de l'achat du véhicule.</li>
+      <li data-li18n-html="li2">Installation & Maintenance : Frais d'installation uniques suivis d'un contrat de maintenance annuel pour garantir la sécurité et la performance du système.</li>
+      <li data-li18n-html="li3">Monitoring & SaaS : Une plateforme de télésurveillance et de mise à jour logicielle (OTA) par abonnement mensuel, offrant des diagnostics préventifs et des données de production en temps réel.</li>
+    </ul>
+
+    <h2 data-li18n="h2.2">La Feuille de Route (Roadmap)</h2>
+    <div class="roadmap-container">
+      <div class="roadmap-item">
+        <div class="roadmap-date" data-li18n="ph1.date">Phase 1</div>
+        <div class="roadmap-title" data-li18n="ph1.title">Le Prototype MVP</div>
+        <div class="roadmap-desc" data-li18n="ph1.desc">Assemblage du premier modèle fonctionnel. Validation de la chaîne de production H₂ et de la compression à 700 bar en environnement de test.</div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-date" data-li18n="ph2.date">Phase 2</div>
+        <div class="roadmap-title" data-li18n="ph2.title">Validation B2C (10 unités)</div>
+        <div class="roadmap-desc" data-li18n="ph2.desc">Déploiement chez 10 propriétaires pionniers de Mirai et Nexo. Collecte de données réelles et début du processus de certification ISO 22734.</div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-date" data-li18n="ph3.date">Phase 3</div>
+        <div class="roadmap-title" data-li18n="ph3.title">Partenariat OEM</div>
+        <div class="roadmap-desc" data-li18n="ph3.desc">Signature d'un accord commercial avec un grand constructeur. Intégration du produit dans l'offre commerciale véhicule.</div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-date" data-li18n="ph4.date">Phase 4</div>
+        <div class="roadmap-title" data-li18n="ph4.title">Expansion Flottes B2B</div>
+        <div class="roadmap-desc" data-li18n="ph4.desc">Vente aux flottes de taxis, polices et livraisons. Déploiement de plus de 100 unités sur des hubs logistiques.</div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-date" data-li18n="ph5.date">Phase 5</div>
+        <div class="roadmap-title" data-li18n="ph5.title">Diversification</div>
+        <div class="roadmap-desc" data-li18n="ph5.desc">Entrée sur les marchés adjacents : chariots élévateurs (350 bar), agriculture et stockage d'énergie résidentiel.</div>
+      </div>
+    </div>
+
+    <h2 data-li18n="h2.3">Pourquoi Hydrodomus Gagnera ?</h2>
+    <p data-li18n-html="p3">La complexité technique comme barrière : Développer un système résidentiel à 700 bar qui soit à la fois sûr, compact et abordable est un défi d'ingénierie majeur. Notre avance technologique et nos choix de conception (Buffer-less) nous donnent un avantage compétitif durable.</p>
+    <p data-li18n-html="p4">Le verrouillage par la certification : Les normes ATEX, PED et ISO 19880 sont extrêmement exigeantes. En étant les premiers à obtenir ces certifications, nous créons une barrière à l'entrée significative pour tout nouvel entrant.</p>
+    <p data-li18n-html="p5">L'effet de réseau OEM : Une fois intégrés chez un constructeur, la barrière au changement est élevée. Nous devenons l'infrastructure standard pour leurs clients.</p>
+  </div>
+</div>
+
+<footer style="background: var(--bg-alt); padding: 4rem 0;">
+  <div class="container" style="text-align: center;">
+    <p data-li18n="footer">© 2025 Hydrodomus Academy — Usage Interne</p>
+  </div>
+</footer>
+
+<script>
+  window.LEARN_I18N = {
+    fr: {
+      pagetitle: 'Vision & Stratégie — Hydrodomus Learn',
+      back: 'Retour au hub Learn',
+      tag: 'Business & Stratégie',
+      h1: 'Vision & Stratégie de Croissance',
+      sub: "Décentraliser l'infrastructure hydrogène pour libérer l'adoption massive de la mobilité durable.",
+      p1: 'Hydrodomus est né d\'une conviction simple : si les voitures électriques ont pu démocratiser leur recharge à domicile, les véhicules à hydrogène le peuvent aussi. Notre mission est de devenir le "Tesla Supercharger" de l\'hydrogène, mais directement dans votre garage.',
+      'h2.1': 'Modèle Économique',
+      p2: 'Notre stratégie repose sur trois piliers de revenus complémentaires :',
+      li1: "<strong>OEM Bundling :</strong> Partenariats avec les constructeurs automobiles (Toyota, Hyundai, BMW) pour intégrer Hydrodomus comme option lors de l'achat du véhicule.",
+      li2: "<strong>Installation & Maintenance :</strong> Frais d'installation uniques suivis d'un contrat de maintenance annuel pour garantir la sécurité et la performance du système.",
+      li3: "<strong>Monitoring & SaaS :</strong> Une plateforme de télésurveillance et de mise à jour logicielle (OTA) par abonnement mensuel, offrant des diagnostics préventifs et des données de production en temps réel.",
+      'h2.2': 'La Feuille de Route (Roadmap)',
+      'ph1.date': 'Phase 1', 'ph1.title': 'Le Prototype MVP',
+      'ph1.desc': "Assemblage du premier modèle fonctionnel. Validation de la chaîne de production H₂ et de la compression à 700 bar en environnement de test.",
+      'ph2.date': 'Phase 2', 'ph2.title': 'Validation B2C (10 unités)',
+      'ph2.desc': 'Déploiement chez 10 propriétaires pionniers de Mirai et Nexo. Collecte de données réelles et début du processus de certification ISO 22734.',
+      'ph3.date': 'Phase 3', 'ph3.title': 'Partenariat OEM',
+      'ph3.desc': "Signature d'un accord commercial avec un grand constructeur. Intégration du produit dans l'offre commerciale véhicule.",
+      'ph4.date': 'Phase 4', 'ph4.title': 'Expansion Flottes B2B',
+      'ph4.desc': 'Vente aux flottes de taxis, polices et livraisons. Déploiement de plus de 100 unités sur des hubs logistiques.',
+      'ph5.date': 'Phase 5', 'ph5.title': 'Diversification',
+      'ph5.desc': "Entrée sur les marchés adjacents : chariots élévateurs (350 bar), agriculture et stockage d'énergie résidentiel.",
+      'h2.3': 'Pourquoi Hydrodomus Gagnera ?',
+      p3: "<strong>La complexité technique comme barrière :</strong> Développer un système résidentiel à 700 bar qui soit à la fois sûr, compact et abordable est un défi d'ingénierie majeur. Notre avance technologique et nos choix de conception (Buffer-less) nous donnent un avantage compétitif durable.",
+      p4: "<strong>Le verrouillage par la certification :</strong> Les normes ATEX, PED et ISO 19880 sont extrêmement exigeantes. En étant les premiers à obtenir ces certifications, nous créons une barrière à l'entrée significative pour tout nouvel entrant.",
+      p5: "<strong>L'effet de réseau OEM :</strong> Une fois intégrés chez un constructeur, la barrière au changement est élevée. Nous devenons l'infrastructure standard pour leurs clients.",
+      footer: '© 2025 Hydrodomus Academy — Usage Interne',
+    },
+    en: {
+      pagetitle: 'Vision & Strategy — Hydrodomus Learn',
+      back: 'Back to Learn hub',
+      tag: 'Business & Strategy',
+      h1: 'Growth Vision & Strategy',
+      sub: 'Decentralizing hydrogen infrastructure to unlock mass adoption of sustainable mobility.',
+      p1: 'Hydrodomus was born from a simple conviction: if electric cars could democratize home charging, hydrogen vehicles can too. Our mission is to become the "Tesla Supercharger" of hydrogen — but right in your garage.',
+      'h2.1': 'Business Model',
+      p2: 'Our strategy rests on three complementary revenue pillars:',
+      li1: '<strong>OEM Bundling:</strong> Partnerships with automakers (Toyota, Hyundai, BMW) to integrate Hydrodomus as an option at the point of vehicle purchase.',
+      li2: '<strong>Installation & Maintenance:</strong> One-time installation fees followed by an annual maintenance contract to guarantee system safety and performance.',
+      li3: '<strong>Monitoring & SaaS:</strong> A remote monitoring and over-the-air (OTA) software update platform on a monthly subscription, offering predictive diagnostics and real-time production data.',
+      'h2.2': 'The Roadmap',
+      'ph1.date': 'Phase 1', 'ph1.title': 'The MVP Prototype',
+      'ph1.desc': 'Assembly of the first working model. Validation of the H₂ production chain and 700-bar compression in a test environment.',
+      'ph2.date': 'Phase 2', 'ph2.title': 'B2C Validation (10 units)',
+      'ph2.desc': 'Deployment to 10 pioneer Mirai and Nexo owners. Real-world data collection and the start of ISO 22734 certification.',
+      'ph3.date': 'Phase 3', 'ph3.title': 'OEM Partnership',
+      'ph3.desc': 'Signing a commercial agreement with a major automaker. Product integration into the vehicle sales offer.',
+      'ph4.date': 'Phase 4', 'ph4.title': 'B2B Fleet Expansion',
+      'ph4.desc': 'Sales to taxi, police, and delivery fleets. Deployment of 100+ units across logistics hubs.',
+      'ph5.date': 'Phase 5', 'ph5.title': 'Diversification',
+      'ph5.desc': 'Entry into adjacent markets: forklifts (350 bar), agriculture, and residential energy storage.',
+      'h2.3': 'Why Hydrodomus Will Win',
+      p3: '<strong>Technical complexity as a barrier:</strong> Building a residential 700-bar system that is safe, compact, and affordable is a major engineering challenge. Our technological lead and design choices (buffer-less) give us a durable competitive advantage.',
+      p4: '<strong>Certification lock-in:</strong> ATEX, PED, and ISO 19880 standards are extremely demanding. By being first to secure these certifications, we create a significant barrier to entry for any new competitor.',
+      p5: "<strong>The OEM network effect:</strong> Once integrated at an automaker, the switching barrier is high. We become the standard infrastructure for their customers.",
+      footer: '© 2025 Hydrodomus Academy — Internal use only',
+    },
+  };
+</script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/learn-i18n.js"></script>
+</body>
+</html>

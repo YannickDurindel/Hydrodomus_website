@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-li18n="pagetitle">Ingénierie Système — Hydrodomus Learn</title>
+  <link rel="icon" href="../assets/images/logo-removebg.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    .article-container { max-width: 800px; margin: 4rem auto; padding: 0 2rem; }
+    .article-header { margin-bottom: 3rem; border-bottom: 1px solid var(--border); padding-bottom: 2rem; }
+    .article-body h2 { margin: 3rem 0 1.5rem; font-size: 1.75rem; border-left: 4px solid var(--blue); padding-left: 1rem; }
+    .article-body h3 { margin: 2rem 0 1rem; font-size: 1.25rem; color: var(--navy-2); }
+    .article-body p { margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--text-2); line-height: 1.8; }
+
+    .diagram-box {
+      background: var(--bg);
+      padding: 2rem;
+      border-radius: var(--radius);
+      margin: 2rem 0;
+      border: 1px solid var(--border);
+    }
+    .flow-step {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .flow-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--blue);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-weight: 700;
+    }
+    .flow-text { font-weight: 500; font-size: 0.95rem; }
+    .flow-arrow { margin-left: 20px; height: 20px; border-left: 2px dashed var(--border-2); margin-bottom: 1rem; }
+
+    .component-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .component-card {
+      padding: 1.25rem;
+      background: var(--bg-alt);
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+    }
+    .component-card strong { display: block; margin-bottom: 0.5rem; color: var(--navy); }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.95rem;
+    }
+    .data-table th, .data-table td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+    }
+    .data-table th { background: var(--bg-alt); font-weight: 700; color: var(--navy); }
+
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; font-weight: 600; color: var(--blue); }
+  </style>
+</head>
+<body>
+
+<nav class="nav nav-minimal" id="main-nav">
+  <a href="../index.html" class="nav-logo">
+    <img src="../assets/images/logo-removebg.png" alt="Hydrodomus">
+    <span class="nav-logo-name">Hydrodomus</span>
+  </a>
+  <div class="nav-right">
+    <button class="lang-btn" data-lang="fr">FR</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+</nav>
+
+<div class="article-container">
+  <a href="index.html" class="back-link">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    <span data-li18n="back">Retour au hub Learn</span>
+  </a>
+
+  <header class="article-header">
+    <span class="section-tag" data-li18n="tag">Science & Ingénierie</span>
+    <h1 data-li18n="h1">Architecture Système Hydrodomus</h1>
+    <p class="section-sub" data-li18n="sub">Un système en boucle fermée conçu pour la performance résidentielle et la sécurité intrinsèque.</p>
+  </header>
+
+  <div class="article-body">
+    <p data-li18n="p1">Hydrodomus est un appareil de production et de stockage d'hydrogène résidentiel en boucle fermée. Il convertit l'eau du robinet et l'électricité en hydrogène comprimé à 700 bar, prêt à ravitailler n'importe quel véhicule FCEV en environ 3 minutes.</p>
+
+    <h2 data-li18n="h2.1">Flux de processus</h2>
+    <div class="diagram-box">
+      <div class="flow-step">
+        <div class="flow-icon">1</div>
+        <div class="flow-text" data-li18n="flow1">Entrée Eau & Électricité (Filtration RO + Deionisation)</div>
+      </div>
+      <div class="flow-arrow"></div>
+      <div class="flow-step">
+        <div class="flow-icon">2</div>
+        <div class="flow-text" data-li18n="flow2">Stack Électrolyseur PEM (Production H₂ à 30 bar)</div>
+      </div>
+      <div class="flow-arrow"></div>
+      <div class="flow-step">
+        <div class="flow-icon">3</div>
+        <div class="flow-text" data-li18n="flow3">Compression Multi-étagée (30 bar → 700 bar)</div>
+      </div>
+      <div class="flow-arrow"></div>
+      <div class="flow-step">
+        <div class="flow-icon">4</div>
+        <div class="flow-text" data-li18n="flow4">Tampon Haute Pression (< 10 L à 700 bar)</div>
+      </div>
+      <div class="flow-arrow"></div>
+      <div class="flow-step">
+        <div class="flow-icon">5</div>
+        <div class="flow-text" data-li18n="flow5">Interface de recharge SAE J2601</div>
+      </div>
+    </div>
+
+    <h2 data-li18n="h2.2">Les 8 sous-systèmes clés</h2>
+    <div class="component-grid">
+      <div class="component-card">
+        <strong data-li18n="c1.t">01. Filtration Eau</strong>
+        <span data-li18n="c1.d">Osmose inverse + résines échangeuses d'ions pour eau ultra-pure (< 1 µS/cm).</span>
+      </div>
+      <div class="component-card">
+        <strong data-li18n="c2.t">02. Électronique de Puissance</strong>
+        <span data-li18n="c2.d">Conversion AC/DC 2-3 kW optimisée pour le load-following solaire.</span>
+      </div>
+      <div class="component-card">
+        <strong data-li18n="c3.t">03. Stack PEM</strong>
+        <span data-li18n="c3.d">Membrane à échange de protons. Production différentielle à 30 bar.</span>
+      </div>
+      <div class="component-card">
+        <strong data-li18n="c4.t">04. Buffer Basse Pression</strong>
+        <span data-li18n="c4.d">Volume minimal (< 5 L) pour stabiliser le flux vers le compresseur.</span>
+      </div>
+      <div class="component-card">
+        <strong data-li18n="c5.t">05. Compresseur HP</strong>
+        <span data-li18n="c5.d">Compresseur à piston multi-étagé (ratio 23:1) avec refroidissement inter-étage.</span>
+      </div>
+      <div class="component-card">
+        <strong data-li18n="c6.t">06. Buffer Haute Pression</strong>
+        <span data-li18n="c6.d">Réservoir composite Type IV (carbone/polymère). Volume < 10 L.</span>
+      </div>
+      <div class="component-card">
+        <strong data-li18n="c7.t">07. Contrôle & Sécurité</strong>
+        <span data-li18n="c7.d">Automate industriel (PLC) + Système instrumenté de sécurité (SIS) câblé.</span>
+      </div>
+      <div class="component-card">
+        <strong data-li18n="c8.t">08. Pistolet de recharge</strong>
+        <span data-li18n="c8.d">Standard SAE J2601 avec communication infrarouge véhicule.</span>
+      </div>
+    </div>
+
+    <h2 data-li18n="h2.3">Philosophie de sécurité</h2>
+    <p data-li18n="p2">La conception d'Hydrodomus repose sur deux piliers :</p>
+    <ul>
+      <li data-li18n-html="li1">Fail-Closed : Toutes les vannes d'isolation sont normalement fermées. En cas de perte d'alimentation ou de défaut, le système s'isole instantanément.</li>
+      <li data-li18n-html="li2">Buffer-Less : Contrairement aux stations publiques qui stockent des centaines de kg d'H₂, Hydrodomus limite son stockage HP à moins de 10 litres. Cela réduit radicalement l'énergie potentiellement libérée en cas d'incident.</li>
+    </ul>
+
+    <h2 data-li18n="h2.4">Bilan Masse & Énergie</h2>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th data-li18n="th.param">Paramètre</th>
+          <th data-li18n="th.val">Valeur Typique</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-li18n="r1.p">Consommation d'eau</td>
+          <td data-li18n="r1.v">~9 L par kg de H₂</td>
+        </tr>
+        <tr>
+          <td data-li18n="r2.p">Consommation électrique</td>
+          <td data-li18n="r2.v">~55 kWh par kg de H₂</td>
+        </tr>
+        <tr>
+          <td data-li18n="r3.p">Efficacité Système</td>
+          <td>~60–65%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<footer style="background: var(--bg-alt); padding: 4rem 0;">
+  <div class="container" style="text-align: center;">
+    <p data-li18n="footer">© 2025 Hydrodomus Academy — Usage Interne</p>
+  </div>
+</footer>
+
+<script>
+  window.LEARN_I18N = {
+    fr: {
+      pagetitle: 'Ingénierie Système — Hydrodomus Learn',
+      back: 'Retour au hub Learn',
+      tag: 'Science & Ingénierie',
+      h1: 'Architecture Système Hydrodomus',
+      sub: 'Un système en boucle fermée conçu pour la performance résidentielle et la sécurité intrinsèque.',
+      p1: "Hydrodomus est un appareil de production et de stockage d'hydrogène résidentiel en boucle fermée. Il convertit l'eau du robinet et l'électricité en hydrogène comprimé à 700 bar, prêt à ravitailler n'importe quel véhicule FCEV en environ 3 minutes.",
+      'h2.1': 'Flux de processus',
+      flow1: 'Entrée Eau & Électricité (Filtration RO + Déionisation)',
+      flow2: 'Stack Électrolyseur PEM (Production H₂ à 30 bar)',
+      flow3: 'Compression Multi-étagée (30 bar → 700 bar)',
+      flow4: 'Tampon Haute Pression (< 10 L à 700 bar)',
+      flow5: 'Interface de recharge SAE J2601',
+      'h2.2': 'Les 8 sous-systèmes clés',
+      'c1.t': '01. Filtration Eau', 'c1.d': "Osmose inverse + résines échangeuses d'ions pour eau ultra-pure (< 1 µS/cm).",
+      'c2.t': '02. Électronique de Puissance', 'c2.d': 'Conversion AC/DC 2-3 kW optimisée pour le load-following solaire.',
+      'c3.t': '03. Stack PEM', 'c3.d': 'Membrane à échange de protons. Production différentielle à 30 bar.',
+      'c4.t': '04. Buffer Basse Pression', 'c4.d': 'Volume minimal (< 5 L) pour stabiliser le flux vers le compresseur.',
+      'c5.t': '05. Compresseur HP', 'c5.d': 'Compresseur à piston multi-étagé (ratio 23:1) avec refroidissement inter-étage.',
+      'c6.t': '06. Buffer Haute Pression', 'c6.d': 'Réservoir composite Type IV (carbone/polymère). Volume < 10 L.',
+      'c7.t': '07. Contrôle & Sécurité', 'c7.d': 'Automate industriel (PLC) + Système instrumenté de sécurité (SIS) câblé.',
+      'c8.t': '08. Pistolet de recharge', 'c8.d': 'Standard SAE J2601 avec communication infrarouge véhicule.',
+      'h2.3': 'Philosophie de sécurité',
+      p2: 'La conception d\'Hydrodomus repose sur deux piliers :',
+      li1: "<strong>Fail-Closed :</strong> Toutes les vannes d'isolation sont normalement fermées. En cas de perte d'alimentation ou de défaut, le système s'isole instantanément.",
+      li2: "<strong>Buffer-Less :</strong> Contrairement aux stations publiques qui stockent des centaines de kg d'H₂, Hydrodomus limite son stockage HP à moins de 10 litres. Cela réduit radicalement l'énergie potentiellement libérée en cas d'incident.",
+      'h2.4': 'Bilan Masse & Énergie',
+      'th.param': 'Paramètre', 'th.val': 'Valeur Typique',
+      'r1.p': "Consommation d'eau", 'r1.v': '~9 L par kg de H₂',
+      'r2.p': 'Consommation électrique', 'r2.v': '~55 kWh par kg de H₂',
+      'r3.p': 'Efficacité Système',
+      footer: '© 2025 Hydrodomus Academy — Usage Interne',
+    },
+    en: {
+      pagetitle: 'System Engineering — Hydrodomus Learn',
+      back: 'Back to Learn hub',
+      tag: 'Science & Engineering',
+      h1: 'Hydrodomus System Architecture',
+      sub: 'A closed-loop system designed for residential performance and intrinsic safety.',
+      p1: 'Hydrodomus is a closed-loop residential hydrogen production and storage appliance. It converts tap water and electricity into hydrogen compressed to 700 bar, ready to refuel any FCEV in about 3 minutes.',
+      'h2.1': 'Process Flow',
+      flow1: 'Water & Electricity Input (RO Filtration + Deionization)',
+      flow2: 'PEM Electrolyzer Stack (H₂ production at 30 bar)',
+      flow3: 'Multi-stage Compression (30 bar → 700 bar)',
+      flow4: 'High-Pressure Buffer (< 10 L at 700 bar)',
+      flow5: 'SAE J2601 Refueling Interface',
+      'h2.2': 'The 8 Key Subsystems',
+      'c1.t': '01. Water Filtration', 'c1.d': 'Reverse osmosis + ion-exchange resins for ultra-pure water (< 1 µS/cm).',
+      'c2.t': '02. Power Electronics', 'c2.d': '2-3 kW AC/DC conversion optimized for solar load-following.',
+      'c3.t': '03. PEM Stack', 'c3.d': 'Proton exchange membrane. Differential production at 30 bar.',
+      'c4.t': '04. Low-Pressure Buffer', 'c4.d': 'Minimal volume (< 5 L) to stabilize flow to the compressor.',
+      'c5.t': '05. HP Compressor', 'c5.d': 'Multi-stage piston compressor (23:1 ratio) with inter-stage cooling.',
+      'c6.t': '06. High-Pressure Buffer', 'c6.d': 'Type IV composite tank (carbon/polymer). Volume < 10 L.',
+      'c7.t': '07. Control & Safety', 'c7.d': 'Industrial PLC + hardwired Safety Instrumented System (SIS).',
+      'c8.t': '08. Refueling Nozzle', 'c8.d': 'SAE J2601 standard with infrared vehicle communication.',
+      'h2.3': 'Safety Philosophy',
+      p2: "Hydrodomus's design rests on two pillars:",
+      li1: '<strong>Fail-Closed:</strong> All isolation valves are normally closed. On any power loss or fault, the system isolates instantly.',
+      li2: '<strong>Buffer-Less:</strong> Unlike public stations that store hundreds of kg of H₂, Hydrodomus limits its HP storage to under 10 liters — radically reducing the energy potentially released in an incident.',
+      'h2.4': 'Mass & Energy Balance',
+      'th.param': 'Parameter', 'th.val': 'Typical Value',
+      'r1.p': 'Water consumption', 'r1.v': '~9 L per kg of H₂',
+      'r2.p': 'Electricity consumption', 'r2.v': '~55 kWh per kg of H₂',
+      'r3.p': 'System efficiency',
+      footer: '© 2025 Hydrodomus Academy — Internal use only',
+    },
+  };
+</script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/learn-i18n.js"></script>
+</body>
+</html>

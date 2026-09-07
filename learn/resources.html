@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-li18n="pagetitle">Ressources — Hydrodomus Learn</title>
+  <link rel="icon" href="../assets/images/logo-removebg.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    .article-container { max-width: 800px; margin: 4rem auto; padding: 0 2rem; }
+    .resource-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 3rem; }
+    .resource-card {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      background: var(--bg);
+      border-radius: var(--radius);
+      transition: all 0.2s;
+      border: 1px solid var(--border);
+    }
+    .resource-card:hover { border-color: var(--blue); background: white; box-shadow: var(--shadow); }
+    .resource-icon { width: 40px; height: 40px; flex-shrink: 0; }
+    .resource-info h3 { font-size: 1.1rem; margin-bottom: 0.25rem; }
+    .resource-info p { font-size: 0.9rem; color: var(--text-3); }
+    .info-note {
+      background: var(--blue-light);
+      padding: 1.5rem;
+      border-radius: var(--radius-sm);
+      border-left: 4px solid var(--blue);
+      margin: 2rem 0;
+      font-style: italic;
+    }
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; font-weight: 600; color: var(--blue); }
+  </style>
+</head>
+<body>
+
+<nav class="nav nav-minimal" id="main-nav">
+  <a href="../index.html" class="nav-logo">
+    <img src="../assets/images/logo-removebg.png" alt="Hydrodomus">
+    <span class="nav-logo-name">Hydrodomus</span>
+  </a>
+  <div class="nav-right">
+    <button class="lang-btn" data-lang="fr">FR</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+</nav>
+
+<div class="article-container">
+  <a href="index.html" class="back-link">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    <span data-li18n="back">Retour au hub Learn</span>
+  </a>
+
+  <header class="article-header">
+    <span class="section-tag" data-li18n="tag">Ressources</span>
+    <h1 data-li18n="h1">Approfondir vos connaissances</h1>
+    <p class="section-sub" data-li18n="sub">Une sélection de vidéos et de sources pour rester à la pointe de l'industrie hydrogène.</p>
+  </header>
+
+  <div class="resource-grid">
+    <a href="https://www.youtube.com/watch?v=9OLxBvLvCoM" target="_blank" class="resource-card">
+      <div class="resource-icon">
+        <svg viewBox="0 0 24 24" fill="#FF0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </div>
+      <div class="resource-info">
+        <h3 data-li18n="r1.t">Veille de base : L'Hydrogène</h3>
+        <p data-li18n="r1.d">Une introduction claire sur le rôle de l'hydrogène dans la transition énergétique.</p>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=AGTjKJHu99c" target="_blank" class="resource-card">
+      <div class="resource-icon">
+        <svg viewBox="0 0 24 24" fill="#FF0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </div>
+      <div class="resource-info">
+        <h3 data-li18n="r2.t">L'économie de l'hydrogène</h3>
+        <p data-li18n="r2.d">Analyse approfondie des enjeux industriels et économiques.</p>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=b88v-WvqzeQ" target="_blank" class="resource-card">
+      <div class="resource-icon">
+        <svg viewBox="0 0 24 24" fill="#FF0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </div>
+      <div class="resource-info">
+        <h3 data-li18n="r3.t">Voitures Hydrogène : Le Guide</h3>
+        <p data-li18n="r3.d">Spécificités techniques et avantages des véhicules FCEV par rapport aux batteries.</p>
+      </div>
+    </a>
+
+    <a href="https://fuelcellsworks.com/" target="_blank" class="resource-card">
+      <div class="resource-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 20l-7-7-7 7V5a2 2 0 012-2h10a2 2 0 012 2v15z"/></svg>
+      </div>
+      <div class="resource-info">
+        <h3>FuelCellsWorks</h3>
+        <p data-li18n="r4.d">Le média de référence pour les actualités quotidiennes du secteur hydrogène.</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="info-note" style="margin-top: 3rem;">
+    <span data-li18n-html="note">Note : La plupart de ces ressources sont en anglais. Si vous avez besoin de traductions ou de résumés spécifiques, n'hésitez pas à demander.</span>
+  </div>
+</div>
+
+<footer style="background: var(--bg-alt); padding: 4rem 0;">
+  <div class="container" style="text-align: center;">
+    <p data-li18n="footer">© 2025 Hydrodomus Academy — Usage Interne</p>
+  </div>
+</footer>
+
+<script>
+  window.LEARN_I18N = {
+    fr: {
+      pagetitle: 'Ressources — Hydrodomus Learn',
+      back: 'Retour au hub Learn',
+      tag: 'Ressources',
+      h1: 'Approfondir vos connaissances',
+      sub: "Une sélection de vidéos et de sources pour rester à la pointe de l'industrie hydrogène.",
+      'r1.t': "Veille de base : L'Hydrogène",
+      'r1.d': "Une introduction claire sur le rôle de l'hydrogène dans la transition énergétique.",
+      'r2.t': "L'économie de l'hydrogène",
+      'r2.d': 'Analyse approfondie des enjeux industriels et économiques.',
+      'r3.t': 'Voitures Hydrogène : Le Guide',
+      'r3.d': 'Spécificités techniques et avantages des véhicules FCEV par rapport aux batteries.',
+      'r4.d': "Le média de référence pour les actualités quotidiennes du secteur hydrogène.",
+      note: "<strong>Note :</strong> La plupart de ces ressources sont en anglais. Si vous avez besoin de traductions ou de résumés spécifiques, n'hésitez pas à demander.",
+      footer: '© 2025 Hydrodomus Academy — Usage Interne',
+    },
+    en: {
+      pagetitle: 'Resources — Hydrodomus Learn',
+      back: 'Back to Learn hub',
+      tag: 'Resources',
+      h1: 'Go Further',
+      sub: 'A selection of videos and sources to stay at the cutting edge of the hydrogen industry.',
+      'r1.t': 'Hydrogen 101',
+      'r1.d': "A clear introduction to hydrogen's role in the energy transition.",
+      'r2.t': 'The Hydrogen Economy',
+      'r2.d': 'An in-depth look at the industrial and economic stakes.',
+      'r3.t': 'Hydrogen Cars: The Guide',
+      'r3.d': 'Technical specifics and advantages of FCEVs compared to batteries.',
+      'r4.d': 'The go-to outlet for daily news from the hydrogen sector.',
+      note: "<strong>Note:</strong> Most of these resources are in English. If you need translations or specific summaries, feel free to ask.",
+      footer: '© 2025 Hydrodomus Academy — Internal use only',
+    },
+  };
+</script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/learn-i18n.js"></script>
+</body>
+</html>

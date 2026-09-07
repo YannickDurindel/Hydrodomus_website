@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-li18n="hub.pagetitle">Learn — Hydrodomus Academy</title>
+  <meta name="description" content="Tout ce qu'il faut savoir sur l'hydrogène, la science, l'industrie et le futur de la mobilité.">
+  <link rel="icon" href="../assets/images/logo-removebg.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    .learn-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 120px 0 60px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+      color: white;
+      text-align: center;
+    }
+    .learn-hero h1 { color: white; margin-bottom: 1rem; }
+    .learn-hero p { color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
+
+    .pitch-card {
+      display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+      background: linear-gradient(135deg, var(--navy-2) 0%, var(--navy) 70%);
+      color: #fff;
+      border-radius: var(--radius-lg);
+      padding: 2.25rem 2.75rem;
+      box-shadow: var(--shadow-lg);
+      margin: -40px auto 2rem;
+      position: relative; z-index: 10; overflow: hidden;
+      flex-wrap: wrap;
+    }
+    .pitch-card-text .section-tag { color: rgba(255,255,255,0.55); }
+    .pitch-card-text .section-tag::before { background: rgba(255,255,255,0.45); }
+    .pitch-card h2 { color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem; }
+    .pitch-card p { color: rgba(255,255,255,0.7); margin: 0; max-width: 480px; }
+    .pitch-card .btn { flex-shrink: 0; }
+
+    .learn-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+      margin: 0 auto 4rem;
+      position: relative;
+      z-index: 10;
+    }
+    .path-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-lg);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .path-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    }
+    .path-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--blue-light);
+      color: var(--blue);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .path-card h2 { margin-bottom: 1rem; font-size: 1.5rem; }
+    .path-card p { color: var(--text-3); margin-bottom: 2rem; flex-grow: 1; }
+    .path-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .path-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      background: var(--bg);
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      color: var(--navy);
+      transition: all 0.2s;
+    }
+    .path-link:hover {
+      background: var(--blue-dim);
+      color: var(--blue);
+    }
+    .path-link svg { width: 18px; height: 18px; }
+
+    .external-resources {
+      margin-top: 4rem;
+      padding: 4rem 0;
+      background: var(--bg-alt);
+      border-radius: var(--radius);
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="main-nav">
+  <a href="../index.html" class="nav-logo">
+    <img src="../assets/images/logo-removebg.png" alt="Hydrodomus">
+    <span class="nav-logo-name">Hydrodomus</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html" data-i18n="nav.home">Accueil</a></li>
+    <li><a href="../how-it-works.html" data-i18n="nav.how">Comment ça marche</a></li>
+    <li><a href="../waitlist.html" data-i18n="nav.waitlist">Liste d'attente</a></li>
+    <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-btn" data-lang="fr">FR</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" id="mobile-close">✕</button>
+  <a href="../index.html" class="mobile-nav-link" data-i18n="nav.home">Accueil</a>
+  <a href="../how-it-works.html" class="mobile-nav-link" data-i18n="nav.how">Comment ça marche</a>
+  <a href="../waitlist.html" class="mobile-nav-link" data-i18n="nav.waitlist">Liste d'attente</a>
+  <a href="../contact.html" class="mobile-nav-link" data-i18n="nav.contact">Contact</a>
+  <div class="mobile-lang">
+    <button class="lang-btn" data-lang="fr">FR</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+</div>
+
+<section class="learn-hero">
+  <div class="container">
+    <span class="section-tag" style="color:white; border-color:white;" data-li18n="hub.tag">Hydrodomus Learn</span>
+    <h1 data-li18n="hub.title">L'Université de l'Hydrogène</h1>
+    <p data-li18n="hub.sub">Une ressource complète pour nos employés et investisseurs afin de maîtriser la science, la technologie et le marché de l'hydrogène.</p>
+  </div>
+</section>
+
+<section class="section-white">
+  <div class="container">
+
+    <!-- PITCH DECK -->
+    <a href="../assets/docs/pitchdeck.pdf" target="_blank" class="pitch-card">
+      <div class="pitch-card-text">
+        <span class="section-tag" data-li18n="pitch.tag">Document clé</span>
+        <h2 data-li18n="pitch.title">Pitch Deck Hydrodomus</h2>
+        <p data-li18n="pitch.desc">Notre présentation investisseurs complète — vision, marché, technologie et levée de fonds.</p>
+      </div>
+      <span class="btn btn-white" data-li18n="pitch.btn">Ouvrir le pitch deck ↗</span>
+    </a>
+
+    <div class="learn-grid">
+      <!-- BUSINESS TRACK -->
+      <div class="path-card reveal">
+        <div class="path-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <h2 data-li18n="track.business.title">Business & Stratégie</h2>
+        <p data-li18n="track.business.desc">Comprendre l'économie de l'hydrogène, l'opportunité de marché et pourquoi c'est le futur de la mobilité lourde et résidentielle.</p>
+        <div class="path-links">
+          <a href="market.html" class="path-link">
+            <span data-li18n="link.market">Marché & Industrie</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="strategy.html" class="path-link">
+            <span data-li18n="link.strategy">Vision & Stratégie</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- SCIENCE TRACK -->
+      <div class="path-card reveal d1">
+        <div class="path-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h2 data-li18n="track.science.title">Science & Ingénierie</h2>
+        <p data-li18n="track.science.desc">Plongée technique dans l'électrochimie, la thermodynamique de la compression et l'architecture système Hydrodomus.</p>
+        <div class="path-links">
+          <a href="science.html" class="path-link">
+            <span data-li18n="link.science">Science de l'Hydrogène</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="engineering.html" class="path-link">
+            <span data-li18n="link.engineering">Ingénierie Système</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="external-resources reveal d2">
+      <div class="container" style="text-align: center;">
+        <h2 class="section-title" data-li18n="ext.title">Ressources Externes</h2>
+        <p class="section-sub" style="margin: 1rem auto 3rem;" data-li18n="ext.sub">Vidéos et sources recommandées pour approfondir vos connaissances.</p>
+        <a href="resources.html" class="btn btn-primary" data-li18n="ext.btn">Voir les ressources ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="margin-top: 4rem;">
+  <div class="container">
+    <div class="footer-bottom">
+      <p data-li18n="footer.copy">© 2025 Hydrodomus. Document interne à usage restreint.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  window.LEARN_I18N = {
+    fr: {
+      'hub.pagetitle': 'Learn — Hydrodomus Academy',
+      'hub.tag': 'Hydrodomus Learn',
+      'hub.title': "L'Université de l'Hydrogène",
+      'hub.sub': "Une ressource complète pour nos employés et investisseurs afin de maîtriser la science, la technologie et le marché de l'hydrogène.",
+      'pitch.tag': 'Document clé',
+      'pitch.title': 'Pitch Deck Hydrodomus',
+      'pitch.desc': 'Notre présentation investisseurs complète : vision, marché, technologie et levée de fonds.',
+      'pitch.btn': 'Ouvrir le pitch deck ↗',
+      'track.business.title': 'Business & Stratégie',
+      'track.business.desc': "Comprendre l'économie de l'hydrogène, l'opportunité de marché et pourquoi c'est le futur de la mobilité lourde et résidentielle.",
+      'link.market': 'Marché & Industrie',
+      'link.strategy': 'Vision & Stratégie',
+      'track.science.title': 'Science & Ingénierie',
+      'track.science.desc': "Plongée technique dans l'électrochimie, la thermodynamique de la compression et l'architecture système Hydrodomus.",
+      'link.science': "Science de l'Hydrogène",
+      'link.engineering': 'Ingénierie Système',
+      'ext.title': 'Ressources Externes',
+      'ext.sub': 'Vidéos et sources recommandées pour approfondir vos connaissances.',
+      'ext.btn': 'Voir les ressources ↗',
+      'footer.copy': '© 2025 Hydrodomus. Document interne à usage restreint.',
+    },
+    en: {
+      'hub.pagetitle': 'Learn — Hydrodomus Academy',
+      'hub.tag': 'Hydrodomus Learn',
+      'hub.title': 'The Hydrogen University',
+      'hub.sub': 'A complete resource for our employees and investors to master the science, technology, and market of hydrogen.',
+      'pitch.tag': 'Key document',
+      'pitch.title': 'Hydrodomus Pitch Deck',
+      'pitch.desc': 'Our full investor presentation: vision, market, technology, and fundraising.',
+      'pitch.btn': 'Open the pitch deck ↗',
+      'track.business.title': 'Business & Strategy',
+      'track.business.desc': "Understand hydrogen economics, the market opportunity, and why it's the future of heavy-duty and residential mobility.",
+      'link.market': 'Market & Industry',
+      'link.strategy': 'Vision & Strategy',
+      'track.science.title': 'Science & Engineering',
+      'track.science.desc': 'A technical deep-dive into electrochemistry, compression thermodynamics, and the Hydrodomus system architecture.',
+      'link.science': 'Hydrogen Science',
+      'link.engineering': 'System Engineering',
+      'ext.title': 'External Resources',
+      'ext.sub': 'Recommended videos and sources to deepen your knowledge.',
+      'ext.btn': 'View resources ↗',
+      'footer.copy': '© 2025 Hydrodomus. Internal document — restricted use.',
+    },
+  };
+</script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/learn-i18n.js"></script>
+</body>
+</html>
