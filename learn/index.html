@@ -11,17 +11,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
   <link rel="stylesheet" href="../assets/css/style.css" />
   <style>
-    .learn-hero {
-      position: relative;
-      overflow: hidden;
-      padding: 120px 0 60px;
-      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
-      color: white;
-      text-align: center;
-    }
-    .learn-hero h1 { color: white; margin-bottom: 1rem; }
-    .learn-hero p { color: rgba(255,255,255,0.8); max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
-
     .pitch-card {
       display: flex; align-items: center; justify-content: space-between; gap: 2rem;
       background: linear-gradient(135deg, var(--navy-2) 0%, var(--navy) 70%);
@@ -135,15 +124,7 @@
   </div>
 </div>
 
-<section class="learn-hero">
-  <div class="container">
-    <span class="section-tag" style="color:white; border-color:white;" data-li18n="hub.tag">Hydrodomus Learn</span>
-    <h1 data-li18n="hub.title">L'Université de l'Hydrogène</h1>
-    <p data-li18n="hub.sub">Une ressource complète pour nos employés et investisseurs afin de maîtriser la science, la technologie et le marché de l'hydrogène.</p>
-  </div>
-</section>
-
-<section class="section-white">
+<section class="section-white" style="padding-top: calc(var(--section-py) + 3.5rem);">
   <div class="container">
 
     <!-- PITCH DECK -->
@@ -218,9 +199,6 @@
   window.LEARN_I18N = {
     fr: {
       'hub.pagetitle': 'Learn — Hydrodomus Academy',
-      'hub.tag': 'Hydrodomus Learn',
-      'hub.title': "L'Université de l'Hydrogène",
-      'hub.sub': "Une ressource complète pour nos employés et investisseurs afin de maîtriser la science, la technologie et le marché de l'hydrogène.",
       'pitch.tag': 'Document clé',
       'pitch.title': 'Pitch Deck Hydrodomus',
       'pitch.desc': 'Notre présentation investisseurs complète : vision, marché, technologie et levée de fonds.',
@@ -240,9 +218,6 @@
     },
     en: {
       'hub.pagetitle': 'Learn — Hydrodomus Academy',
-      'hub.tag': 'Hydrodomus Learn',
-      'hub.title': 'The Hydrogen University',
-      'hub.sub': 'A complete resource for our employees and investors to master the science, technology, and market of hydrogen.',
       'pitch.tag': 'Key document',
       'pitch.title': 'Hydrodomus Pitch Deck',
       'pitch.desc': 'Our full investor presentation: vision, market, technology, and fundraising.',
