@@ -77,7 +77,7 @@ const translations = {
     /* ── CONTACT PAGE ── */
     'ct.tag':      'Contact',
     'ct.title':    'Contactez-nous',
-    'ct.sub':      "Une question, un partenariat, une candidature — écrivez-nous.",
+    'ct.sub':      "Une question, un partenariat, une candidature : écrivez-nous.",
     'ct.name':     'Nom complet',
     'ct.email':    'Email',
     'ct.company':  'Société (optionnel)',
@@ -93,7 +93,7 @@ const translations = {
     'ct.opt.press':    'Presse / Médias',
     'ct.opt.other':    'Autre',
     'ct.hiring.tag':   'Nous recrutons',
-    'ct.hiring.text':  "Hydrodomus agrandit son équipe. Si vous souhaitez nous rejoindre, sélectionnez « Candidature / Recrutement » dans le formulaire et présentez-vous — nous n'avons pas de liste de postes fixe pour le moment.",
+    'ct.hiring.text':  "Hydrodomus agrandit son équipe. Si vous souhaitez nous rejoindre, sélectionnez « Candidature / Recrutement » dans le formulaire et présentez-vous. Nous n'avons pas de liste de postes fixe pour le moment.",
   },
 
   en: {
@@ -169,7 +169,7 @@ const translations = {
     /* ── CONTACT PAGE ── */
     'ct.tag':      'Contact',
     'ct.title':    'Get in touch',
-    'ct.sub':      'A question, a partnership, an application — write to us.',
+    'ct.sub':      'A question, a partnership, an application: write to us.',
     'ct.name':     'Full name',
     'ct.email':    'Email',
     'ct.company':  'Company (optional)',
@@ -185,7 +185,7 @@ const translations = {
     'ct.opt.press':    'Press / Media',
     'ct.opt.other':    'Other',
     'ct.hiring.tag':   "We're hiring",
-    'ct.hiring.text':  'Hydrodomus is growing its team. If you would like to join us, select "Application / Careers" in the form and introduce yourself — we do not have a fixed list of open roles right now.',
+    'ct.hiring.text':  'Hydrodomus is growing its team. If you would like to join us, select "Application / Careers" in the form and introduce yourself. We do not have a fixed list of open roles right now.',
   }
 };
 

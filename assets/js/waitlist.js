@@ -198,7 +198,7 @@
         hydrogen_interest: answers.interest || 'n/a',
         country: answers.country,
         email: answers.email,
-        _subject: "Nouvelle inscription — liste d'attente Hydrodomus",
+        _subject: "Nouvelle inscription, liste d'attente Hydrodomus",
       }),
     })
       .then((res) => { if (res.ok) renderDone(null); else renderDone(t('wl.err.submit')); })

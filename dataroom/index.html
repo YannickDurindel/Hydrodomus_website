@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hydrodomus Data Room</title>
+  <meta name="description" content="Hydrodomus investor data room.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="../assets/images/logo-removebg.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    .dr-container { max-width: 800px; margin: 3.5rem auto 6rem; padding: 0 2rem; }
+    .dr-header { margin-bottom: 2.5rem; }
+    .dr-tag {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--text-3); margin-bottom: 1rem;
+    }
+    .dr-tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); }
+    .dr-header h1 { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.4rem); color: var(--navy); margin-bottom: 0.75rem; }
+    .dr-header p { color: var(--text-3); line-height: 1.7; max-width: 620px; }
+    .dr-confidential {
+      margin-top: 1.5rem;
+      background: var(--blue-light);
+      border-left: 4px solid var(--blue);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      font-size: 0.85rem;
+      color: var(--text-2);
+      line-height: 1.6;
+    }
+    .dr-section { margin: 3rem 0; }
+    .dr-section h2 {
+      font-family: var(--font-display); font-size: 1.15rem; color: var(--navy);
+      margin-bottom: 0.35rem;
+    }
+    .dr-section > p.dr-desc { color: var(--text-3); font-size: 0.9rem; margin-bottom: 1.25rem; }
+    .resource-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+    .resource-card {
+      display: flex; align-items: center; gap: 1.25rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+      transition: all 0.15s;
+    }
+    a.resource-card:hover { border-color: var(--blue); background: white; box-shadow: var(--shadow); }
+    .resource-icon {
+      width: 38px; height: 38px; flex-shrink: 0; border-radius: 8px;
+      background: var(--blue-light); color: var(--blue);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .resource-info h3 { font-size: 1rem; margin-bottom: 0.15rem; color: var(--navy); }
+    .resource-info p { font-size: 0.85rem; color: var(--text-3); }
+    .dr-note-card {
+      padding: 1.25rem 1.5rem;
+      background: var(--bg); border: 1px dashed var(--border-2); border-radius: var(--radius);
+      font-size: 0.9rem; color: var(--text-3);
+    }
+    .dr-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .dr-table th, .dr-table td { text-align: left; padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); }
+    .dr-table th { color: var(--text-3); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .dr-table td { color: var(--text-2); }
+    .dr-table-wrap { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--bg); }
+    .dr-terms { margin-top: 1rem; font-size: 0.85rem; color: var(--text-3); line-height: 1.7; }
+    .dr-terms strong { color: var(--text-2); }
+    .dr-footer {
+      margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border);
+      font-size: 0.85rem; color: var(--text-4);
+    }
+    .dr-footer a { color: var(--blue); font-weight: 600; }
+  </style>
+</head>
+<body>
+
+<nav class="nav nav-minimal" id="main-nav">
+  <a href="../index.html" class="nav-logo">
+    <img src="../assets/images/logo-removebg.png" alt="Hydrodomus">
+    <span class="nav-logo-name">Hydrodomus</span>
+  </a>
+</nav>
+
+<div class="dr-container">
+  <header class="dr-header">
+    <span class="dr-tag">Investor Data Room</span>
+    <h1>Hydrodomus Data Room</h1>
+    <p>Hydrodomus is building an at-home hydrogen fueling appliance for fuel-cell vehicles. This page consolidates the materials shared with prospective investors during due diligence. Its go-to-market is not selling the device to automakers directly. The goal is for OEMs to list Hydrodomus as an at-home fueling option alongside the vehicle on their own configurator/website, while Hydrodomus retains pricing control over the unit itself.</p>
+    <div class="dr-confidential">
+      This page is unlisted and shared only with parties we've given the direct link to. Please treat its contents as confidential and do not redistribute the link without checking with us first.
+    </div>
+  </header>
+
+  <section class="dr-section">
+    <h2>Pitch Deck</h2>
+    <p class="dr-desc">Company, product, and market overview.</p>
+    <div class="resource-grid">
+      <a href="../assets/docs/pitchdeck.pdf" class="resource-card" target="_blank" rel="noopener">
+        <div class="resource-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>
+        <div class="resource-info">
+          <h3>Hydrodomus Pitch Deck</h3>
+          <p>PDF · updated 27 August 2026</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="dr-section">
+    <h2>Investor Updates</h2>
+    <p class="dr-desc">Monthly progress updates sent to our investor and advisor list.</p>
+    <div class="resource-grid">
+      <a href="../assets/docs/investor-update-august-2026.pdf" class="resource-card" target="_blank" rel="noopener">
+        <div class="resource-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>
+        <div class="resource-info"><h3>August 2026</h3><p>PDF</p></div>
+      </a>
+      <a href="../assets/docs/investor-update-july-2026.pdf" class="resource-card" target="_blank" rel="noopener">
+        <div class="resource-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>
+        <div class="resource-info"><h3>July 2026</h3><p>PDF</p></div>
+      </a>
+      <a href="../assets/docs/investor-update-june-2026.pdf" class="resource-card" target="_blank" rel="noopener">
+        <div class="resource-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>
+        <div class="resource-info"><h3>June 2026</h3><p>PDF</p></div>
+      </a>
+      <a href="../assets/docs/investor-update-february-2026.pdf" class="resource-card" target="_blank" rel="noopener">
+        <div class="resource-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>
+        <div class="resource-info"><h3>February 2026</h3><p>PDF</p></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="dr-section">
+    <h2>Financing Ask &amp; Use of Funds</h2>
+    <p class="dr-desc">Sourced breakdown of the current raise and how it would be deployed.</p>
+    <div class="resource-grid">
+      <a href="../assets/docs/financing-needs.pdf" class="resource-card" target="_blank" rel="noopener">
+        <div class="resource-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div>
+        <div class="resource-info">
+          <h3>Financing Needs: Use of Funds</h3>
+          <p>PDF · IP, hardware, certification, team &amp; opex, sourced line by line</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="dr-section">
+    <h2>Round Terms &amp; Cap Table</h2>
+    <p class="dr-desc">Hydrodomus is a single-founder French SAS (no prior priced rounds), with two advisors onboarding at 0.5% each. The company is raising via BSA AIR (French SAFE-equivalent).</p>
+    <div class="dr-table-wrap">
+      <table class="dr-table">
+        <thead>
+          <tr><th>Holder</th><th>Pre-round</th><th>Pro forma post-round (fully diluted, at cap)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Founder</td><td>99%</td><td>~89%</td></tr>
+          <tr><td>Advisors (2 × 0.5%)</td><td>1%</td><td>~1%</td></tr>
+          <tr><td>Incoming investors (this round)</td><td>0%</td><td>~10%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="dr-terms">
+      <strong>Round size:</strong> ~€500,000 target<br>
+      <strong>Instrument:</strong> BSA AIR (fixed-cap convertible), not a priced round<br>
+      <strong>Valuation cap:</strong> €4.5M pre-money / €5M post-money<br>
+      <strong>Entity:</strong> French SAS (no Delaware flip)
+    </div>
+  </section>
+
+  <section class="dr-section">
+    <h2>Intellectual Property</h2>
+    <p class="dr-desc">Status of the company's patent filing.</p>
+    <div class="dr-note-card">
+      French patent application filed with the INPI on 15 August 2026 (application no. FR2611116), currently pending examination. The invention assignment from the founder to the SAS has been executed. <strong>Full filing documents available on request under NDA.</strong>
+    </div>
+  </section>
+
+  <section class="dr-section">
+    <h2>Legal &amp; Corporate</h2>
+    <p class="dr-desc">Incorporation and corporate documents.</p>
+    <div class="dr-note-card">
+      KBIS extract, company statutes (statuts), and other corporate records are available on request.
+    </div>
+  </section>
+
+  <div class="dr-footer">
+    Questions or need something not listed here? Reach out at <a href="mailto:yannick@hydrodomus.com">yannick@hydrodomus.com</a>.
+  </div>
+</div>
+
+</body>
+</html>
