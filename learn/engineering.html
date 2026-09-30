@@ -73,6 +73,7 @@
 
     .back-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem; font-weight: 600; color: var(--blue); }
   </style>
+<script src="../assets/js/gate.js" data-scope="learn" data-hash="372c37b2df583601b66c5a75e13adf4518c416c86302c4317116685b6ade4d4d"></script>
 </head>
 <body>
 
@@ -96,17 +97,17 @@
   <header class="article-header">
     <span class="section-tag" data-li18n="tag">Science & Ingénierie</span>
     <h1 data-li18n="h1">Architecture Système Hydrodomus</h1>
-    <p class="section-sub" data-li18n="sub">Un système en boucle fermée conçu pour la performance résidentielle et la sécurité intrinsèque.</p>
+    <p class="section-sub" data-li18n="sub">Un système en boucle fermée conçu pour le déploiement sur le terrain et la sécurité intrinsèque.</p>
   </header>
 
   <div class="article-body">
-    <p data-li18n="p1">Hydrodomus est un appareil de production et de stockage d'hydrogène résidentiel en boucle fermée. Il convertit l'eau du robinet et l'électricité en hydrogène comprimé à 700 bar, prêt à ravitailler n'importe quel véhicule FCEV en environ 3 minutes.</p>
+    <p data-li18n="p1">Hydrodomus est un nœud de production et de ravitaillement en hydrogène en boucle fermée, transportable. Il convertit l'eau et l'électricité (groupe électrogène, réseau ou solaire) en hydrogène comprimé à 350 bar, prêt à remplir le réservoir d'un drone en moins de 5 minutes.</p>
 
     <h2 data-li18n="h2.1">Flux de processus</h2>
     <div class="diagram-box">
       <div class="flow-step">
         <div class="flow-icon">1</div>
-        <div class="flow-text" data-li18n="flow1">Entrée Eau & Électricité (Filtration RO + Deionisation)</div>
+        <div class="flow-text" data-li18n="flow1">Entrée Eau & Électricité (Filtration RO + Déionisation)</div>
       </div>
       <div class="flow-arrow"></div>
       <div class="flow-step">
@@ -116,17 +117,17 @@
       <div class="flow-arrow"></div>
       <div class="flow-step">
         <div class="flow-icon">3</div>
-        <div class="flow-text" data-li18n="flow3">Compression Multi-étagée (30 bar → 700 bar)</div>
+        <div class="flow-text" data-li18n="flow3">Compression Multi-étagée (30 bar → 350 bar)</div>
       </div>
       <div class="flow-arrow"></div>
       <div class="flow-step">
         <div class="flow-icon">4</div>
-        <div class="flow-text" data-li18n="flow4">Tampon Haute Pression (< 10 L à 700 bar)</div>
+        <div class="flow-text" data-li18n="flow4">Stockage Haute Pression en cascade (350 bar)</div>
       </div>
       <div class="flow-arrow"></div>
       <div class="flow-step">
         <div class="flow-icon">5</div>
-        <div class="flow-text" data-li18n="flow5">Interface de recharge SAE J2601</div>
+        <div class="flow-text" data-li18n="flow5">Interface de ravitaillement drone (raccord rapide)</div>
       </div>
     </div>
 
@@ -138,7 +139,7 @@
       </div>
       <div class="component-card">
         <strong data-li18n="c2.t">02. Électronique de Puissance</strong>
-        <span data-li18n="c2.d">Conversion AC/DC 2-3 kW optimisée pour le load-following solaire.</span>
+        <span data-li18n="c2.d">Conversion AC/DC multi-source (groupe électrogène, réseau, solaire).</span>
       </div>
       <div class="component-card">
         <strong data-li18n="c3.t">03. Stack PEM</strong>
@@ -146,23 +147,23 @@
       </div>
       <div class="component-card">
         <strong data-li18n="c4.t">04. Buffer Basse Pression</strong>
-        <span data-li18n="c4.d">Volume minimal (< 5 L) pour stabiliser le flux vers le compresseur.</span>
+        <span data-li18n="c4.d">Petit volume pour stabiliser le flux vers le compresseur.</span>
       </div>
       <div class="component-card">
         <strong data-li18n="c5.t">05. Compresseur HP</strong>
-        <span data-li18n="c5.d">Compresseur à piston multi-étagé (ratio 23:1) avec refroidissement inter-étage.</span>
+        <span data-li18n="c5.d">Compresseur multi-étagé avec refroidissement inter-étage (ratio d'environ 10–17:1).</span>
       </div>
       <div class="component-card">
         <strong data-li18n="c6.t">06. Buffer Haute Pression</strong>
-        <span data-li18n="c6.d">Réservoir composite Type IV (carbone/polymère). Volume < 10 L.</span>
+        <span data-li18n="c6.d">Cascade de bouteilles composites Type III/IV à 350–400 bar.</span>
       </div>
       <div class="component-card">
         <strong data-li18n="c7.t">07. Contrôle & Sécurité</strong>
         <span data-li18n="c7.d">Automate industriel (PLC) + Système instrumenté de sécurité (SIS) câblé.</span>
       </div>
       <div class="component-card">
-        <strong data-li18n="c8.t">08. Pistolet de recharge</strong>
-        <span data-li18n="c8.d">Standard SAE J2601 avec communication infrarouge véhicule.</span>
+        <strong data-li18n="c8.t">08. Panneau de ravitaillement</strong>
+        <span data-li18n="c8.d">Raccord rapide adapté au réservoir du drone, débitmètre et coupleur de rupture.</span>
       </div>
     </div>
 
@@ -170,7 +171,8 @@
     <p data-li18n="p2">La conception d'Hydrodomus repose sur deux piliers :</p>
     <ul>
       <li data-li18n-html="li1">Fail-Closed : Toutes les vannes d'isolation sont normalement fermées. En cas de perte d'alimentation ou de défaut, le système s'isole instantanément.</li>
-      <li data-li18n-html="li2">Buffer-Less : Contrairement aux stations publiques qui stockent des centaines de kg d'H₂, Hydrodomus limite son stockage HP à moins de 10 litres. Cela réduit radicalement l'énergie potentiellement libérée en cas d'incident.</li>
+      <li data-li18n-html="li2">Stockage maîtrisé : Le stockage HP est limité à quelques bouteilles composites certifiées, avec soupapes de sécurité à chaque étage et détection de gaz sur toute la chaîne, dimensionné pour la mission plutôt que pour une station publique.</li>
+      <li data-li18n-html="li3">Conçu pour le terrain : Objectif de qualification MIL-STD-810 (chocs, vibrations, -32 °C à +49 °C, poussière, pluie) et MIL-STD-461 (CEM). Il s'agit d'objectifs de conception : la qualification n'a pas encore été réalisée.</li>
     </ul>
 
     <h2 data-li18n="h2.4">Bilan Masse & Énergie</h2>
@@ -212,27 +214,28 @@
       back: 'Retour au hub Learn',
       tag: 'Science & Ingénierie',
       h1: 'Architecture Système Hydrodomus',
-      sub: 'Un système en boucle fermée conçu pour la performance résidentielle et la sécurité intrinsèque.',
-      p1: "Hydrodomus est un appareil de production et de stockage d'hydrogène résidentiel en boucle fermée. Il convertit l'eau du robinet et l'électricité en hydrogène comprimé à 700 bar, prêt à ravitailler n'importe quel véhicule FCEV en environ 3 minutes.",
+      sub: "Un système en boucle fermée conçu pour le déploiement sur le terrain et la sécurité intrinsèque.",
+      p1: "Hydrodomus est un nœud de production et de ravitaillement en hydrogène en boucle fermée, transportable. Il convertit l'eau et l'électricité (groupe électrogène, réseau ou solaire) en hydrogène comprimé à 350 bar, prêt à remplir le réservoir d'un drone en moins de 5 minutes.",
       'h2.1': 'Flux de processus',
-      flow1: 'Entrée Eau & Électricité (Filtration RO + Déionisation)',
+      flow1: "Entrée Eau & Électricité (Filtration RO + Déionisation)",
       flow2: 'Stack Électrolyseur PEM (Production H₂ à 30 bar)',
-      flow3: 'Compression Multi-étagée (30 bar → 700 bar)',
-      flow4: 'Tampon Haute Pression (< 10 L à 700 bar)',
-      flow5: 'Interface de recharge SAE J2601',
+      flow3: "Compression Multi-étagée (30 bar → 350 bar)",
+      flow4: "Stockage Haute Pression en cascade (350 bar)",
+      flow5: "Interface de ravitaillement drone (raccord rapide)",
       'h2.2': 'Les 8 sous-systèmes clés',
       'c1.t': '01. Filtration Eau', 'c1.d': "Osmose inverse + résines échangeuses d'ions pour eau ultra-pure (< 1 µS/cm).",
-      'c2.t': '02. Électronique de Puissance', 'c2.d': 'Conversion AC/DC 2-3 kW optimisée pour le load-following solaire.',
+      'c2.t': '02. Électronique de Puissance', 'c2.d': "Conversion AC/DC multi-source (groupe électrogène, réseau, solaire).",
       'c3.t': '03. Stack PEM', 'c3.d': 'Membrane à échange de protons. Production différentielle à 30 bar.',
-      'c4.t': '04. Buffer Basse Pression', 'c4.d': 'Volume minimal (< 5 L) pour stabiliser le flux vers le compresseur.',
-      'c5.t': '05. Compresseur HP', 'c5.d': 'Compresseur à piston multi-étagé (ratio 23:1) avec refroidissement inter-étage.',
-      'c6.t': '06. Buffer Haute Pression', 'c6.d': 'Réservoir composite Type IV (carbone/polymère). Volume < 10 L.',
+      'c4.t': '04. Buffer Basse Pression', 'c4.d': "Petit volume pour stabiliser le flux vers le compresseur.",
+      'c5.t': '05. Compresseur HP', 'c5.d': "Compresseur multi-étagé avec refroidissement inter-étage (ratio d'environ 10–17:1).",
+      'c6.t': '06. Buffer Haute Pression', 'c6.d': "Cascade de bouteilles composites Type III/IV à 350–400 bar.",
       'c7.t': '07. Contrôle & Sécurité', 'c7.d': 'Automate industriel (PLC) + Système instrumenté de sécurité (SIS) câblé.',
-      'c8.t': '08. Pistolet de recharge', 'c8.d': 'Standard SAE J2601 avec communication infrarouge véhicule.',
+      'c8.t': "08. Panneau de ravitaillement", 'c8.d': "Raccord rapide adapté au réservoir du drone, débitmètre et coupleur de rupture.",
       'h2.3': 'Philosophie de sécurité',
       p2: 'La conception d\'Hydrodomus repose sur deux piliers :',
       li1: "<strong>Fail-Closed :</strong> Toutes les vannes d'isolation sont normalement fermées. En cas de perte d'alimentation ou de défaut, le système s'isole instantanément.",
-      li2: "<strong>Buffer-Less :</strong> Contrairement aux stations publiques qui stockent des centaines de kg d'H₂, Hydrodomus limite son stockage HP à moins de 10 litres. Cela réduit radicalement l'énergie potentiellement libérée en cas d'incident.",
+      li2: "<strong>Stockage maîtrisé :</strong> Le stockage HP est limité à quelques bouteilles composites certifiées, avec soupapes de sécurité à chaque étage et détection de gaz sur toute la chaîne, dimensionné pour la mission plutôt que pour une station publique.",
+      li3: "<strong>Conçu pour le terrain :</strong> Objectif de qualification MIL-STD-810 (chocs, vibrations, -32 °C à +49 °C, poussière, pluie) et MIL-STD-461 (CEM). Il s'agit d'objectifs de conception : la qualification n'a pas encore été réalisée.",
       'h2.4': 'Bilan Masse & Énergie',
       'th.param': 'Paramètre', 'th.val': 'Valeur Typique',
       'r1.p': "Consommation d'eau", 'r1.v': '~9 L par kg de H₂',
@@ -245,27 +248,28 @@
       back: 'Back to Learn hub',
       tag: 'Science & Engineering',
       h1: 'Hydrodomus System Architecture',
-      sub: 'A closed-loop system designed for residential performance and intrinsic safety.',
-      p1: 'Hydrodomus is a closed-loop residential hydrogen production and storage appliance. It converts tap water and electricity into hydrogen compressed to 700 bar, ready to refuel any FCEV in about 3 minutes.',
+      sub: "A closed-loop system designed for field deployment and intrinsic safety.",
+      p1: "Hydrodomus is a closed-loop, transportable hydrogen production and refueling node. It converts water and electricity (generator, grid, or solar) into hydrogen compressed to 350 bar, ready to fill a drone tank in under 5 minutes.",
       'h2.1': 'Process Flow',
-      flow1: 'Water & Electricity Input (RO Filtration + Deionization)',
+      flow1: "Water & Electricity Input (RO Filtration + Deionization)",
       flow2: 'PEM Electrolyzer Stack (H₂ production at 30 bar)',
-      flow3: 'Multi-stage Compression (30 bar → 700 bar)',
-      flow4: 'High-Pressure Buffer (< 10 L at 700 bar)',
-      flow5: 'SAE J2601 Refueling Interface',
+      flow3: "Multi-stage Compression (30 bar → 350 bar)",
+      flow4: "High-Pressure Cascade Storage (350 bar)",
+      flow5: "Drone Refueling Interface (quick coupler)",
       'h2.2': 'The 8 Key Subsystems',
       'c1.t': '01. Water Filtration', 'c1.d': 'Reverse osmosis + ion-exchange resins for ultra-pure water (< 1 µS/cm).',
-      'c2.t': '02. Power Electronics', 'c2.d': '2-3 kW AC/DC conversion optimized for solar load-following.',
+      'c2.t': '02. Power Electronics', 'c2.d': "Multi-source AC/DC conversion (generator, grid, solar).",
       'c3.t': '03. PEM Stack', 'c3.d': 'Proton exchange membrane. Differential production at 30 bar.',
-      'c4.t': '04. Low-Pressure Buffer', 'c4.d': 'Minimal volume (< 5 L) to stabilize flow to the compressor.',
-      'c5.t': '05. HP Compressor', 'c5.d': 'Multi-stage piston compressor (23:1 ratio) with inter-stage cooling.',
-      'c6.t': '06. High-Pressure Buffer', 'c6.d': 'Type IV composite tank (carbon/polymer). Volume < 10 L.',
+      'c4.t': '04. Low-Pressure Buffer', 'c4.d': "Small volume to stabilize flow to the compressor.",
+      'c5.t': '05. HP Compressor', 'c5.d': "Multi-stage compressor with inter-stage cooling (roughly 10–17:1 ratio).",
+      'c6.t': '06. High-Pressure Buffer', 'c6.d': "Type III/IV composite cylinder cascade at 350–400 bar.",
       'c7.t': '07. Control & Safety', 'c7.d': 'Industrial PLC + hardwired Safety Instrumented System (SIS).',
-      'c8.t': '08. Refueling Nozzle', 'c8.d': 'SAE J2601 standard with infrared vehicle communication.',
+      'c8.t': "08. Refueling Panel", 'c8.d': "Quick coupler matched to the drone tank, flow meter, and breakaway coupling.",
       'h2.3': 'Safety Philosophy',
       p2: "Hydrodomus's design rests on two pillars:",
       li1: '<strong>Fail-Closed:</strong> All isolation valves are normally closed. On any power loss or fault, the system isolates instantly.',
-      li2: '<strong>Buffer-Less:</strong> Unlike public stations that store hundreds of kg of H₂, Hydrodomus limits its HP storage to under 10 liters, radically reducing the energy potentially released in an incident.',
+      li2: "<strong>Bounded storage:</strong> HP storage is limited to a few certified composite cylinders, with pressure relief on every stage and gas detection throughout, sized to the mission rather than to a public station.",
+      li3: "<strong>Built for the field:</strong> Targeting MIL-STD-810 qualification (shock, vibration, -32 °C to +49 °C, dust, rain) and MIL-STD-461 (EMC). These are design targets: qualification has not yet been performed.",
       'h2.4': 'Mass & Energy Balance',
       'th.param': 'Parameter', 'th.val': 'Typical Value',
       'r1.p': 'Water consumption', 'r1.v': '~9 L per kg of H₂',

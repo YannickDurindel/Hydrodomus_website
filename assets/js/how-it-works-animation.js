@@ -3,7 +3,7 @@
    Input-driven canvas: water inlet -> filter -> PEM electrolysis
    (O2 vented) -> filter+dryer -> low-P buffer (cycles fill/dump) ->
    pump -> high-P buffer (cycles slower) -> pump -> final tank
-   (fills in steps as the high-P buffer dumps) -> 700 bar release.
+   (fills in steps as the high-P buffer dumps) -> 350 bar release.
    ============================================= */
 
 (function () {
@@ -417,7 +417,7 @@
       ctx.globalAlpha = a;
       ctx.fillStyle = '#144EE0';
       roundRectPath(bx + bw / 2 - 30, by - 26, 60, 20, 5); ctx.fill();
-      label('700 bar', bx + bw / 2, by - 16, { color: '#fff', size: 10, weight: 700, alpha: 1 });
+      label('350 bar', bx + bw / 2, by - 16, { color: '#fff', size: 10, weight: 700, alpha: 1 });
       ctx.globalAlpha = 1;
     }
 
@@ -516,7 +516,7 @@
       }
     }
 
-    /* ---- nozzle dispensing burst: tank is full, 700 bar release ---- */
+    /* ---- nozzle dispensing burst: tank is full, 350 bar release ---- */
     if (dispenseActive) {
       const localT = clamp((t - S8.from) / (S8.to - S8.from), 0, 1);
       const originX = px(NOZZLE_X), originY = py(Y);

@@ -11,7 +11,7 @@
 
   const QUESTIONS = [
     { key: 'name',     type: 'text',   q: 'wl.q.name',     ph: 'wl.ph.name' },
-    { key: 'car',      type: 'text',   q: 'wl.q.car',      ph: 'wl.ph.car' },
+    { key: 'org',      type: 'text',   q: 'wl.q.org',      ph: 'wl.ph.org' },
     { key: 'status',   type: 'choice', q: 'wl.q.status',   options: ['wl.status.opt1', 'wl.status.opt2', 'wl.status.opt3'] },
     { key: 'interest', type: 'choice', q: 'wl.q.interest', options: ['wl.interest.opt1', 'wl.interest.opt2', 'wl.interest.opt3', 'wl.interest.opt4', 'wl.interest.opt5'],
       skip: (a) => a.status === (window.t ? window.t('wl.status.opt1') : '') },
@@ -193,7 +193,7 @@
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
         name: answers.name,
-        current_vehicle: answers.car,
+        organization: answers.org,
         hydrogen_status: answers.status,
         hydrogen_interest: answers.interest || 'n/a',
         country: answers.country,
