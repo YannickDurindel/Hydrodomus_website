@@ -192,7 +192,7 @@ const translations = {
 /* =========================================
    LANGUAGE SYSTEM
    ========================================= */
-let lang = localStorage.getItem('hd_lang') || 'fr';
+let lang = localStorage.getItem('hd_lang') || 'en';
 
 function t(key) {
   return (translations[lang] && translations[lang][key]) ||

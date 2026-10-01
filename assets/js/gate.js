@@ -31,7 +31,7 @@
   document.head.appendChild(style);
 
   document.addEventListener('DOMContentLoaded', () => {
-    const fr = (localStorage.getItem('hd_lang') || 'fr') === 'fr';
+    const fr = localStorage.getItem('hd_lang') === 'fr';
     const L = fr
       ? { t: 'Accès protégé', p: 'Entrez le mot de passe qui vous a été communiqué.', ph: 'Mot de passe', b: 'Accéder', e: 'Mot de passe incorrect.' }
       : { t: 'Protected access', p: 'Enter the password you were given.', ph: 'Password', b: 'Unlock', e: 'Incorrect password.' };

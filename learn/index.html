@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,6 +27,8 @@
     .pitch-card h2 { color: #fff; margin-bottom: 0.5rem; font-size: 1.5rem; }
     .pitch-card p { color: rgba(255,255,255,0.7); margin: 0; max-width: 480px; }
     .pitch-card .btn { flex-shrink: 0; }
+    .pitch-links { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; margin: 0.9rem 0 2rem; }
+    .pitch-links a { font-size: 0.95rem; font-weight: 600; color: var(--navy, #0c0a8c); text-decoration: none; border-bottom: 1px solid currentColor; }
 
     .learn-grid {
       display: grid;
@@ -133,10 +135,14 @@
       <div class="pitch-card-text">
         <span class="section-tag" data-li18n="pitch.tag">Document clé</span>
         <h2 data-li18n="pitch.title">Pitch Deck Hydrodomus</h2>
-        <p data-li18n="pitch.desc">Notre présentation investisseurs complète : vision, marché, technologie et levée de fonds.</p>
+        <p data-li18n="pitch.desc">Notre présentation investisseurs : problème, solution, marché, sécurité et levée de fonds.</p>
       </div>
       <span class="btn btn-white" data-li18n="pitch.btn">Ouvrir le pitch deck ↗</span>
     </a>
+    <div class="pitch-links">
+      <a href="../assets/docs/one-pager.pdf" target="_blank" rel="noopener" data-li18n="pitch.one">Fiche investisseur (1 page) ↗</a>
+      <a href="../assets/docs/pitchdeck-company.pdf" target="_blank" rel="noopener" data-li18n="pitch.company">Pitch deck entreprise ↗</a>
+    </div>
 
     <div class="learn-grid">
       <!-- BUSINESS TRACK -->
@@ -202,8 +208,10 @@
       'hub.pagetitle': 'Learn · Hydrodomus Academy',
       'pitch.tag': 'Document clé',
       'pitch.title': 'Pitch Deck Hydrodomus',
-      'pitch.desc': 'Notre présentation investisseurs complète : vision, marché, technologie et levée de fonds.',
+      'pitch.desc': 'Notre présentation investisseurs : problème, solution, marché, sécurité et levée de fonds.',
       'pitch.btn': 'Ouvrir le pitch deck ↗',
+      'pitch.one': 'Fiche investisseur (1 page) ↗',
+      'pitch.company': 'Pitch deck entreprise ↗',
       'track.business.title': 'Business & Stratégie',
       'track.business.desc': "Comprendre l'économie de l'hydrogène, l'opportunité de marché et pourquoi la production sur site est l'avenir de la logistique énergétique pour les systèmes sans équipage.",
       'link.market': 'Marché & Industrie',
@@ -221,8 +229,10 @@
       'hub.pagetitle': 'Learn · Hydrodomus Academy',
       'pitch.tag': 'Key document',
       'pitch.title': 'Hydrodomus Pitch Deck',
-      'pitch.desc': 'Our full investor presentation: vision, market, technology, and fundraising.',
+      'pitch.desc': 'Our investor presentation: problem, solution, market, safety, and fundraising.',
       'pitch.btn': 'Open the pitch deck ↗',
+      'pitch.one': 'Investor one-pager ↗',
+      'pitch.company': 'Company pitch deck ↗',
       'track.business.title': 'Business & Strategy',
       'track.business.desc': "Understand hydrogen economics, the market opportunity, and why on-site production is the future of energy logistics for uncrewed systems.",
       'link.market': 'Market & Industry',

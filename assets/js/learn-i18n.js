@@ -11,7 +11,7 @@
   if (!DICT) return;
 
   function currentLang() {
-    return localStorage.getItem('hd_lang') || 'fr';
+    return localStorage.getItem('hd_lang') || 'en';
   }
 
   function lt(key) {
