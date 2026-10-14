@@ -491,6 +491,8 @@ footer {
 .footer-badge { display: flex; align-items: center; gap: 0.6rem; }
 .footer-badge span { font-size: 0.72rem; color: var(--text-4); }
 .footer-badge img { height: 30px; width: auto; display: block; }
+.footer-badges { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
+.footer-badge-onshape img { height: 48px; }
 
 /* =========================================
    PAGE HEADER
