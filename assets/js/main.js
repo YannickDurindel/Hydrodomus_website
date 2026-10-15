@@ -254,9 +254,10 @@ function initNav() {
     });
   });
 
-  const page = location.pathname.split('/').pop() || 'index.html';
+  const norm = s => s.replace(/\.html$/, '').replace(/^(\.\/|index)$/, '');
+  const page = norm(location.pathname.split('/').pop());
   document.querySelectorAll('.nav-page-link').forEach(a => {
-    if (a.getAttribute('href') === page) a.classList.add('active');
+    if (norm(a.getAttribute('href')) === page) a.classList.add('active');
   });
 }
 
